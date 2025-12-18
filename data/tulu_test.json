@@ -1,0 +1,743 @@
+{
+  "metadata": {
+    "total_sentences": 100,
+    "split": "test",
+    "description": "Test/evaluation set - expanded_v2 - DO NOT USE FOR TRAINING",
+    "created_at": "2024-11-24",
+    "note": "Official evaluation set for ACL submission - minimum 100 examples"
+  },
+  "sentences": [
+    {
+      "english": "It's very hot today.",
+      "tulu": "indu tumba ushNa ullae.",
+      "category": "weather_and_seasons",
+      "verified": true,
+      "source": "enhanced_lessons",
+      "context": "describing_hot_weather"
+    },
+    {
+      "english": "I am very happy today.",
+      "tulu": "indu yAn tumba ushArullae.",
+      "category": "emotions_and_feelings",
+      "verified": true,
+      "source": "enhanced_lessons",
+      "context": "expressing_happiness"
+    },
+    {
+      "english": "The cat is sleeping.",
+      "tulu": "pucche jesondu undu",
+      "category": "animals",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "I live on the second floor.",
+      "tulu": "yaan radne malginedu uppunu",
+      "category": "numbers",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "I want to go to the beach.",
+      "tulu": "yenku beachgu poregu undu",
+      "category": "nature",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "My aunt is a doctor.",
+      "tulu": "yenna maami onji doctor",
+      "category": "family",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "I need to read this book.",
+      "tulu": "yenku undu pustaka odhareg undu",
+      "category": "education",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "I go to bed at 10 PM.",
+      "tulu": "yaan path ghante gu jepunu",
+      "category": "daily_activities",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "My niece loves to dance.",
+      "tulu": "yenna marmal gu dance istha",
+      "category": "family",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "Do you go to work?",
+      "tulu": "Ir kelasak pōpade?",
+      "category": "daily_life",
+      "verified": true,
+      "source": "enhanced_lessons",
+      "context": "asking_about_work"
+    },
+    {
+      "english": "What time do you wake up?",
+      "tulu": "Ir entha vela eddae?",
+      "category": "daily_life",
+      "verified": true,
+      "source": "enhanced_lessons",
+      "context": "asking_wake_up_time"
+    },
+    {
+      "english": "I'm singing festival songs.",
+      "tulu": "yaan parbada padya panondu ulle",
+      "category": "festivals",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "I'm learning to play tennis.",
+      "tulu": "yaan tennis gobbareg kalthondu ulle",
+      "category": "sports",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "I want a green shirt.",
+      "tulu": "yenku pacche shirt bodu",
+      "category": "colors",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "I'm going to the hospital.",
+      "tulu": "yaan asvatre gu povon dulle",
+      "category": "health",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "I'm taking online classes.",
+      "tulu": "yaan online class gethon undu ulle",
+      "category": "education",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "It's foggy in the morning.",
+      "tulu": "kaande mast foggy undu",
+      "category": "weather",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "I brush my teeth and have breakfast.",
+      "tulu": "yAn dante malthae aadi nashta tinpae.",
+      "category": "daily_life",
+      "verified": true,
+      "source": "enhanced_lessons",
+      "context": "morning_routine"
+    },
+    {
+      "english": "Can you cook Tulu food?",
+      "tulu": "Ir Tulu onas bareyond ullar?",
+      "category": "food_and_cooking",
+      "verified": true,
+      "source": "enhanced_lessons",
+      "context": "asking_about_cooking_ability"
+    },
+    {
+      "english": "I need twenty rupees.",
+      "tulu": "yenku irva (20) rupaya bodu itthundu",
+      "category": "numbers",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "I'm celebrating Diwali with my family.",
+      "tulu": "yaan diwali parba nu celebrate malthon undu ulle family dhotti",
+      "category": "festivals",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "Today is Monday.",
+      "tulu": "indu somavāra ullae.",
+      "category": "time_and_dates",
+      "verified": true,
+      "source": "enhanced_lessons",
+      "context": "telling_day"
+    },
+    {
+      "english": "I had rice and curry.",
+      "tulu": "yAn akhaṛụ aadi kari tinD.",
+      "category": "food_and_cooking",
+      "verified": true,
+      "source": "enhanced_lessons",
+      "context": "telling_about_lunch"
+    },
+    {
+      "english": "I need to buy groceries.",
+      "tulu": "yenku groceries gethonreg pore undu",
+      "category": "shopping",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "My nose is running.",
+      "tulu": "yenku joru sheetha aand",
+      "category": "body_parts",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "My father is doing well.",
+      "tulu": "enkDa appa chandae ullar.",
+      "category": "family_relationships",
+      "verified": true,
+      "source": "enhanced_lessons",
+      "context": "telling_about_father"
+    },
+    {
+      "english": "Good morning, how did you sleep?",
+      "tulu": "shubodaya, iru encha nidre maltar?",
+      "category": "greetings",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "What is your name?",
+      "tulu": "IrDa hesaru entha?",
+      "category": "basic_conversations",
+      "verified": true,
+      "source": "enhanced_lessons",
+      "context": "asking_name"
+    },
+    {
+      "english": "I go to the gym every day.",
+      "tulu": "yaan dinala vyayaamagu pope",
+      "category": "sports",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "How many people are in your family?",
+      "tulu": "IrDa kudumbad erthe jana ullar?",
+      "category": "family_relationships",
+      "verified": true,
+      "source": "enhanced_lessons",
+      "context": "asking_family_size"
+    },
+    {
+      "english": "The sun is shining brightly.",
+      "tulu": "ini joru bolpu undu suryena",
+      "category": "weather",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "My printer is not working.",
+      "tulu": "yenna printer nada thondu ijji",
+      "category": "technology",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "I have pain in my leg.",
+      "tulu": "yenna kaarudu bene undu",
+      "category": "body_parts",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "I'm running late.",
+      "tulu": "yenku tada aandu",
+      "category": "time",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "Do you have this in a different size?",
+      "tulu": "undetu eereda bethe size unde?",
+      "category": "shopping",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "I'm wearing new clothes today.",
+      "tulu": "yaan ini posa kuntu paadondu ulle",
+      "category": "festivals",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "How long does the journey take?",
+      "tulu": "undu journeygu yetu portu aapund",
+      "category": "travel",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "I'm taking a taxi to the hotel.",
+      "tulu": "yaan hotelgu taxi du pope",
+      "category": "travel",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "I feel sad about the news.",
+      "tulu": "yenku news kendu bejaar aandu",
+      "category": "emotions",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "I am angry about the delay.",
+      "tulu": "yenku undu delay aapina vajath garva barpund",
+      "category": "emotions",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "I am full, thank you.",
+      "tulu": "yei full undu, solmelu",
+      "category": "food",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "I'm studying engineering.",
+      "tulu": "yaan engineering malthondu ulle",
+      "category": "education",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "What do you do in the morning?",
+      "tulu": "Ir bela entha maltade?",
+      "category": "daily_life",
+      "verified": true,
+      "source": "enhanced_lessons",
+      "context": "asking_morning_activities"
+    },
+    {
+      "english": "I'll be there in 10 minutes.",
+      "tulu": "yaan path (10) nimisha du uppuve",
+      "category": "time",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "What time is it now?",
+      "tulu": "ippa entha vela ullae?",
+      "category": "time_and_dates",
+      "verified": true,
+      "source": "enhanced_lessons",
+      "context": "asking_current_time"
+    },
+    {
+      "english": "I'm looking for a new job.",
+      "tulu": "yaan posa kelasa naadon dulle",
+      "category": "work",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "I like to cycle in the morning.",
+      "tulu": "yenke kaande cycle budaraeg ishta",
+      "category": "sports",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "We are four people in our family.",
+      "tulu": "enkDa kudumbad nālku jana ullapa.",
+      "category": "family_relationships",
+      "verified": true,
+      "source": "enhanced_lessons",
+      "context": "telling_family_size"
+    },
+    {
+      "english": "My mother makes the best dosa.",
+      "tulu": "yenna amma mast shokuda dose malpuver",
+      "category": "food",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "I need to buy two tickets.",
+      "tulu": "yenk rad ticket gethonodu",
+      "category": "numbers",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "The bird is singing.",
+      "tulu": "pakkhi padhiya panondu undu",
+      "category": "animals",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "My mother cooks delicious food.",
+      "tulu": "yenna amma ruchiyitina vanas malpuver",
+      "category": "family",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "I am surprised by the gift.",
+      "tulu": "Uḍugoreḍd eṅk āścarya aand",
+      "category": "emotions",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "Good evening, how was your day?",
+      "tulu": "shuba sayankala, eerena dina encha ittundu?",
+      "category": "greetings",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "My internet connection is poor.",
+      "tulu": "yenna internet connection mast galeeji undu",
+      "category": "technology",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "This place is very beautiful.",
+      "tulu": "undu jaaga mastu porlu undu",
+      "category": "travel",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "I play badminton on weekends.",
+      "tulu": "yaan weekendu du badminton gobbuve",
+      "category": "sports",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "I have zero balance in my account.",
+      "tulu": "yenna accountu du zero undu balance",
+      "category": "numbers",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "I have one hour free.",
+      "tulu": "yaan onji ghantegu free ulle",
+      "category": "numbers",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "Can you give me a discount?",
+      "tulu": "yenku discount korpara?",
+      "category": "shopping",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "I work in a software company.",
+      "tulu": "yaan software company du kelasa malpunu",
+      "category": "work",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "Do you have change?",
+      "tulu": "IrDa sūḍa ullae?",
+      "category": "shopping_and_money",
+      "verified": true,
+      "source": "enhanced_lessons",
+      "context": "asking_for_change"
+    },
+    {
+      "english": "I have a meeting at 3 PM.",
+      "tulu": "yenk mooji (3) ghante gu meeting undu",
+      "category": "work",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "I'll take this one.",
+      "tulu": "yaan undu gethonve",
+      "category": "shopping",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "What season is this?",
+      "tulu": "indu entha ritu ullae?",
+      "category": "weather_and_seasons",
+      "verified": true,
+      "source": "enhanced_lessons",
+      "context": "asking_about_season"
+    },
+    {
+      "english": "I wake up early every day.",
+      "tulu": "yaan dinaala bega lakkuve",
+      "category": "time",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "I am going to Mangalore.",
+      "tulu": "yAn kudlak pōpae.",
+      "category": "travel_and_places",
+      "verified": true,
+      "source": "enhanced_lessons",
+      "context": "telling_destination"
+    },
+    {
+      "english": "I exercise in the morning.",
+      "tulu": "yaan kaande lakudu vyayaama malpuve",
+      "category": "daily_activities",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "Nice to meet you.",
+      "tulu": "IrDa sange meet malthondu chandae ullae.",
+      "category": "basic_conversations",
+      "verified": true,
+      "source": "enhanced_lessons",
+      "context": "pleasure_meeting"
+    },
+    {
+      "english": "It's about 50 kilometers.",
+      "tulu": "adu 50 kilometer dūra ullae.",
+      "category": "travel_and_places",
+      "verified": true,
+      "source": "enhanced_lessons",
+      "context": "telling_distance"
+    },
+    {
+      "english": "My name is Rajesh.",
+      "tulu": "enkDa hesaru Rajesh.",
+      "category": "basic_conversations",
+      "verified": true,
+      "source": "enhanced_lessons",
+      "context": "telling_name"
+    },
+    {
+      "english": "I have a pet dog.",
+      "tulu": "yaan naai sakude",
+      "category": "animals",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "This costs 100 rupees.",
+      "tulu": "undu 100 rupai ullae.",
+      "category": "shopping_and_money",
+      "verified": true,
+      "source": "enhanced_lessons",
+      "context": "telling_price"
+    },
+    {
+      "english": "How is your father?",
+      "tulu": "IrDa appa encha ullar?",
+      "category": "family_relationships",
+      "verified": true,
+      "source": "enhanced_lessons",
+      "context": "asking_about_father"
+    },
+    {
+      "english": "My boss is very strict.",
+      "tulu": "yenna boss mastu strict uller",
+      "category": "work",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "Can you reduce the price?",
+      "tulu": "Ir rupai kammi maltare?",
+      "category": "shopping_and_money",
+      "verified": true,
+      "source": "enhanced_lessons",
+      "context": "bargaining"
+    },
+    {
+      "english": "I'm traveling with my family.",
+      "tulu": "yaan family dothu travel malthon ulle",
+      "category": "travel",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "What day is today?",
+      "tulu": "indu entha dina ullae?",
+      "category": "time_and_dates",
+      "verified": true,
+      "source": "enhanced_lessons",
+      "context": "asking_day"
+    },
+    {
+      "english": "What did you have for lunch?",
+      "tulu": "Ir vanas entha tinD?",
+      "category": "food_and_cooking",
+      "verified": true,
+      "source": "enhanced_lessons",
+      "context": "asking_about_lunch"
+    },
+    {
+      "english": "I watch TV after dinner.",
+      "tulu": "yaan raatreda vanas aay bokka TV tupini",
+      "category": "daily_activities",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "What do you do for work?",
+      "tulu": "Ir entha kelasa maltar?",
+      "category": "work_and_education",
+      "verified": true,
+      "source": "enhanced_lessons",
+      "context": "asking_about_job"
+    },
+    {
+      "english": "I have five books.",
+      "tulu": "yenada ain (5) pustaka undu",
+      "category": "numbers",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "I'm twenty-five years old.",
+      "tulu": "yaanky irva-tain (25) varsha aandu",
+      "category": "numbers",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "I have a pet rabbit.",
+      "tulu": "yenada illadu rabbit undu",
+      "category": "animals",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "Don't worry, everything will be fine.",
+      "tulu": "chinta maltad, ellā chandae aagodu ullae.",
+      "category": "emotions_and_feelings",
+      "verified": true,
+      "source": "enhanced_lessons",
+      "context": "comforting_someone"
+    },
+    {
+      "english": "This shirt is too expensive.",
+      "tulu": "undu shirt mast costly aand",
+      "category": "shopping",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "Hello, how are you?",
+      "tulu": "namaskara, encha ullaru?",
+      "category": "greetings",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "I'm running in the park.",
+      "tulu": "yaan parkdu balithon dulle",
+      "category": "sports",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "I have a headache.",
+      "tulu": "yenku mande bene aavondu undu",
+      "category": "health",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "The flower is beautiful.",
+      "tulu": "undu poo mast porlu undu",
+      "category": "nature",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "It's 3:30 PM.",
+      "tulu": "ippa 3:30 vela ullae.",
+      "category": "time_and_dates",
+      "verified": true,
+      "source": "enhanced_lessons",
+      "context": "telling_current_time"
+    },
+    {
+      "english": "I use my phone every day.",
+      "tulu": "yaan phone dinaala tupe",
+      "category": "technology",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "How much does this cost?",
+      "tulu": "undu erthe rupai ullae?",
+      "category": "shopping_and_money",
+      "verified": true,
+      "source": "enhanced_lessons",
+      "context": "asking_price"
+    },
+    {
+      "english": "I need to rest.",
+      "tulu": "yenku araam malpodu",
+      "category": "health",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "I like rice and curry.",
+      "tulu": "yenku nuppu kachpu mast ishta",
+      "category": "food",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "I want a pink dress.",
+      "tulu": "yenku gulabi dress bodu",
+      "category": "colors",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "Let's go to a restaurant.",
+      "tulu": "hotel gu poye?",
+      "category": "food",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "When is your birthday?",
+      "tulu": "IrDa janmadina yāva dina ullae?",
+      "category": "time_and_dates",
+      "verified": true,
+      "source": "enhanced_lessons",
+      "context": "asking_birthday"
+    },
+    {
+      "english": "How is the weather today?",
+      "tulu": "indu vātāvāra encha ullae?",
+      "category": "weather_and_seasons",
+      "verified": true,
+      "source": "enhanced_lessons",
+      "context": "asking_about_weather"
+    },
+    {
+      "english": "Do you like your job?",
+      "tulu": "Ir enkDa kelasada ishta maltar?",
+      "category": "work_and_education",
+      "verified": true,
+      "source": "enhanced_lessons",
+      "context": "asking_about_job_satisfaction"
+    }
+  ]
+}

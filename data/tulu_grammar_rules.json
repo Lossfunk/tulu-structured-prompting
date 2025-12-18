@@ -1,0 +1,291 @@
+{
+  "verb_conjugations": [
+    {
+      "infinitive_pattern": ".*puni$",
+      "tense": "simple_present",
+      "person": "first_singular",
+      "suffix": "e",
+      "examples": [
+        {
+          "infinitive": "pōpuni",
+          "conjugated": "pōpe"
+        },
+        {
+          "infinitive": "maltuni",
+          "conjugated": "malte"
+        },
+        {
+          "infinitive": "tinpuni",
+          "conjugated": "tinpe"
+        }
+      ]
+    },
+    {
+      "infinitive_pattern": ".*puni$",
+      "tense": "simple_present",
+      "person": "second_singular",
+      "suffix": "ade",
+      "examples": [
+        {
+          "infinitive": "pōpuni",
+          "conjugated": "pōpade"
+        },
+        {
+          "infinitive": "maltuni",
+          "conjugated": "maltade"
+        }
+      ]
+    },
+    {
+      "infinitive_pattern": ".*puni$",
+      "tense": "simple_present",
+      "person": "third_singular",
+      "suffix": "odu",
+      "examples": [
+        {
+          "infinitive": "pōpuni",
+          "conjugated": "pōpodu"
+        },
+        {
+          "infinitive": "maltuni",
+          "conjugated": "maltodu"
+        }
+      ]
+    },
+    {
+      "infinitive_pattern": ".*puni$",
+      "tense": "simple_present",
+      "person": "first_plural",
+      "suffix": "apa",
+      "examples": [
+        {
+          "infinitive": "pōpuni",
+          "conjugated": "pōpapa"
+        },
+        {
+          "infinitive": "maltuni",
+          "conjugated": "maltapa"
+        }
+      ]
+    },
+    {
+      "infinitive_pattern": ".*puni$",
+      "tense": "simple_present",
+      "person": "second_plural",
+      "suffix": "iri",
+      "examples": [
+        {
+          "infinitive": "pōpuni",
+          "conjugated": "pōpiri"
+        },
+        {
+          "infinitive": "maltuni",
+          "conjugated": "maltiri"
+        }
+      ]
+    },
+    {
+      "infinitive_pattern": ".*puni$",
+      "tense": "simple_present",
+      "person": "third_plural",
+      "suffix": "are",
+      "examples": [
+        {
+          "infinitive": "pōpuni",
+          "conjugated": "pōpare"
+        },
+        {
+          "infinitive": "maltuni",
+          "conjugated": "maltare"
+        }
+      ]
+    },
+    {
+      "infinitive_pattern": ".*puni$",
+      "tense": "simple_past",
+      "person": "first_singular",
+      "suffix": "iji",
+      "examples": [
+        {
+          "infinitive": "pōpuni",
+          "conjugated": "pōpiji"
+        },
+        {
+          "infinitive": "maltuni",
+          "conjugated": "maltiji"
+        }
+      ]
+    },
+    {
+      "infinitive_pattern": ".*puni$",
+      "tense": "simple_past",
+      "person": "third_singular",
+      "suffix": "e",
+      "examples": [
+        {
+          "infinitive": "pōpuni",
+          "conjugated": "pōpe"
+        },
+        {
+          "infinitive": "maltuni",
+          "conjugated": "malte"
+        }
+      ]
+    },
+    {
+      "infinitive_pattern": ".*puni$",
+      "tense": "simple_future",
+      "person": "first_singular",
+      "suffix": "ena",
+      "examples": [
+        {
+          "infinitive": "pōpuni",
+          "conjugated": "pōpena"
+        },
+        {
+          "infinitive": "maltuni",
+          "conjugated": "maltena"
+        }
+      ]
+    },
+    {
+      "infinitive_pattern": ".*puni$",
+      "tense": "simple_future",
+      "person": "third_singular",
+      "suffix": "odu",
+      "examples": [
+        {
+          "infinitive": "pōpuni",
+          "conjugated": "pōpodu"
+        },
+        {
+          "infinitive": "maltuni",
+          "conjugated": "maltodu"
+        }
+      ]
+    }
+  ],
+  "morphological_rules": [
+    {
+      "pattern": "(.+)uni$",
+      "transformation": "\\1e",
+      "context": "Present tense, 1st person singular",
+      "examples": [
+        {
+          "input": "pōpuni",
+          "output": "pōpe"
+        },
+        {
+          "input": "maltuni",
+          "output": "malte"
+        }
+      ]
+    },
+    {
+      "pattern": "(.+)uni$",
+      "transformation": "\\1ade",
+      "context": "Present tense, 2nd person singular",
+      "examples": [
+        {
+          "input": "pōpuni",
+          "output": "pōpade"
+        },
+        {
+          "input": "maltuni",
+          "output": "maltade"
+        }
+      ]
+    },
+    {
+      "pattern": "(.+)uni$",
+      "transformation": "\\1odu",
+      "context": "Present tense, 3rd person singular",
+      "examples": [
+        {
+          "input": "pōpuni",
+          "output": "pōpodu"
+        },
+        {
+          "input": "maltuni",
+          "output": "maltodu"
+        }
+      ]
+    },
+    {
+      "pattern": "(.+)uni$",
+      "transformation": "\\1iji",
+      "context": "Past tense, 1st person singular",
+      "examples": [
+        {
+          "input": "pōpuni",
+          "output": "pōpiji"
+        },
+        {
+          "input": "maltuni",
+          "output": "maltiji"
+        }
+      ]
+    },
+    {
+      "pattern": "(.+)uni$",
+      "transformation": "\\1ena",
+      "context": "Future tense, 1st person singular",
+      "examples": [
+        {
+          "input": "pōpuni",
+          "output": "pōpena"
+        },
+        {
+          "input": "maltuni",
+          "output": "maltena"
+        }
+      ]
+    }
+  ],
+  "syntactic_rules": [
+    {
+      "pattern_name": "SOV_Structure",
+      "structure": "Subject + Object + Verb",
+      "description": "Tulu follows Subject-Object-Verb word order",
+      "examples": [
+        "yān pustaka odalāṅ (I book read)",
+        "āḷụ akhaṛụ tinpōḍụ (She rice eats)",
+        "nama śālekụ pōpapa (We school go)"
+      ]
+    },
+    {
+      "pattern_name": "Case_Marking",
+      "structure": "Noun + Case_Marker",
+      "description": "Tulu uses postpositions (case markers) instead of prepositions",
+      "examples": [
+        "maga + aṇụ = magaaṇụ (child + accusative)",
+        "pustaka + akụ = pustakakụ (book + dative)",
+        "illu + lụ = illulụ (house + locative)"
+      ]
+    },
+    {
+      "pattern_name": "Verb_Agreement",
+      "structure": "Verb + Person/Number_Marker",
+      "description": "Verbs must agree with the subject in person and number",
+      "examples": [
+        "yān pōpe (I go - 1st person singular)",
+        "ī pōpade (you go - 2nd person singular)",
+        "aye pōpodu (he goes - 3rd person singular)"
+      ]
+    },
+    {
+      "pattern_name": "Question_Formation",
+      "structure": "Question_Word + SOV",
+      "description": "Questions are formed by adding question words to SOV structure",
+      "examples": [
+        "ēnka pōpade? (Where do you go?)",
+        "ēnụ maltade? (What do you do?)",
+        "yāru barppodu? (Who comes?)"
+      ]
+    }
+  ],
+  "metadata": {
+    "total_rules": 19,
+    "exported_at": "{}"
+  }
+}

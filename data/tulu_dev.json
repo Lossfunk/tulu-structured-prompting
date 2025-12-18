@@ -1,0 +1,150 @@
+{
+  "metadata": {
+    "total_sentences": 20,
+    "split": "dev",
+    "description": "Development/validation set - expanded_v2",
+    "created_at": "2024-11-24"
+  },
+  "sentences": [
+    {
+      "english": "I want to join a sports club.",
+      "tulu": "yenku sports club gu serareg undu",
+      "category": "sports",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "I have an exam tomorrow.",
+      "tulu": "yenku elle exam undu",
+      "category": "education",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "I want to visit the beach.",
+      "tulu": "yenk beach gu poreg undu",
+      "category": "travel",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "I want to return this item.",
+      "tulu": "undu item yenku vapaas korareg ittundu",
+      "category": "shopping",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "I'm lighting lamps for the festival.",
+      "tulu": "yaan deepa pothavondu ulle parba gu",
+      "category": "festivals",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "Hey, how are things?",
+      "tulu": "namaskara, encha ullar bokka?",
+      "category": "greetings",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "I'm afraid of snakes.",
+      "tulu": "yenku kere-du podige aapundu",
+      "category": "animals",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "I need to finish this project.",
+      "tulu": "yenku undu project yenk undu project mugiparegu undu",
+      "category": "work",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "I have three children.",
+      "tulu": "yenada mooji jokulu uller",
+      "category": "numbers",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "I am grateful for your help.",
+      "tulu": "eerena sahayag masth khushi aandu",
+      "category": "emotions",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "The tree is very tall.",
+      "tulu": "undu marra mast uddha undu",
+      "category": "nature",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "I come home in the evening.",
+      "tulu": "yaan illagu bayag barpini",
+      "category": "daily_activities",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "The night is dark.",
+      "tulu": "raatre mast katthale undu",
+      "category": "colors",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "I have a bruise on my arm.",
+      "tulu": "yenna kai-tu gaaya aathund",
+      "category": "body_parts",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "My father is a teacher.",
+      "tulu": "yennmer teacher",
+      "category": "family",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "I need more time to finish.",
+      "tulu": "yenku nana onthe porthu bodu mugiparegu",
+      "category": "time",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "I'm downloading a new app.",
+      "tulu": "yaan posa app download malthon dulle",
+      "category": "technology",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "I have a fever.",
+      "tulu": "yenku jwara undu",
+      "category": "health",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "I don't like spicy food.",
+      "tulu": "yenku kaara thindi ishta ijji",
+      "category": "food",
+      "verified": true,
+      "source": "training_dataset"
+    },
+    {
+      "english": "It's cloudy and cool.",
+      "tulu": "ini moogalu bokka simma undu",
+      "category": "weather",
+      "verified": true,
+      "source": "training_dataset"
+    }
+  ]
+}

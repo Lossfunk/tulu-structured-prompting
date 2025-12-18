@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# API keys
+.env
+.env.local
+*.key
+
+# Outputs
+outputs/
+results/
+*.json.bak
+
+# Data (keep structure, ignore backups and large synthetic files)
+data/*.json.bak
+data/synthetic_data.json
+# Note: Actual data files (tulu_test.json, seed_examples.json, etc.) should be committed
+
+# OS
+.DS_Store
+Thumbs.db
+

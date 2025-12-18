@@ -1,0 +1,11 @@
+# Ensure PDF is treated as binary
+*.pdf binary
+
+# Python files
+*.py text eol=lf
+
+# Markdown files
+*.md text eol=lf
+
+# JSON files
+*.json text eol=lf

@@ -1,0 +1,432 @@
+{
+  "metadata": {
+    "source": "Enhanced Tulu Lessons Collection",
+    "version": "2.0",
+    "created_at": "2024-10-22",
+    "total_lessons": 25,
+    "categories": [
+      "basic_conversations",
+      "daily_life",
+      "family_relationships", 
+      "food_and_cooking",
+      "shopping_and_money",
+      "time_and_dates",
+      "weather_and_seasons",
+      "emotions_and_feelings",
+      "travel_and_places",
+      "work_and_education",
+      "health_and_medical",
+      "festivals_and_culture",
+      "advanced_conversations"
+    ]
+  },
+  "lessons": [
+    {
+      "id": "lesson_01",
+      "category": "basic_conversations",
+      "title": "Greetings and Introductions",
+      "difficulty": "beginner",
+      "conversations": [
+        {
+          "english": "Hello, how are you?",
+          "tulu": "namaskAra, encha ullar?",
+          "context": "formal_greeting"
+        },
+        {
+          "english": "I am fine, thank you. And you?",
+          "tulu": "yAn ushArullae, solmelu. Ir encha ullar?",
+          "context": "response_to_greeting"
+        },
+        {
+          "english": "What is your name?",
+          "tulu": "IrDa hesaru entha?",
+          "context": "asking_name"
+        },
+        {
+          "english": "My name is Rajesh.",
+          "tulu": "enkDa hesaru Rajesh.",
+          "context": "telling_name"
+        },
+        {
+          "english": "Nice to meet you.",
+          "tulu": "IrDa sange meet malthondu chandae ullae.",
+          "context": "pleasure_meeting"
+        }
+      ]
+    },
+    {
+      "id": "lesson_02", 
+      "category": "daily_life",
+      "title": "Daily Activities",
+      "difficulty": "beginner",
+      "conversations": [
+        {
+          "english": "What time do you wake up?",
+          "tulu": "Ir entha vela eddae?",
+          "context": "asking_wake_up_time"
+        },
+        {
+          "english": "I wake up at 6 AM.",
+          "tulu": "yAn 6 vela eddae.",
+          "context": "telling_wake_up_time"
+        },
+        {
+          "english": "What do you do in the morning?",
+          "tulu": "Ir bela entha maltade?",
+          "context": "asking_morning_activities"
+        },
+        {
+          "english": "I brush my teeth and have breakfast.",
+          "tulu": "yAn dante malthae aadi nashta tinpae.",
+          "context": "morning_routine"
+        },
+        {
+          "english": "Do you go to work?",
+          "tulu": "Ir kelasak pōpade?",
+          "context": "asking_about_work"
+        }
+      ]
+    },
+    {
+      "id": "lesson_03",
+      "category": "family_relationships", 
+      "title": "Family Members",
+      "difficulty": "beginner",
+      "conversations": [
+        {
+          "english": "How many people are in your family?",
+          "tulu": "IrDa kudumbad erthe jana ullar?",
+          "context": "asking_family_size"
+        },
+        {
+          "english": "We are four people in our family.",
+          "tulu": "enkDa kudumbad nālku jana ullapa.",
+          "context": "telling_family_size"
+        },
+        {
+          "english": "How is your father?",
+          "tulu": "IrDa appa encha ullar?",
+          "context": "asking_about_father"
+        },
+        {
+          "english": "My father is doing well.",
+          "tulu": "enkDa appa chandae ullar.",
+          "context": "telling_about_father"
+        },
+        {
+          "english": "Where does your mother work?",
+          "tulu": "IrDa amma enka kelasa maltar?",
+          "context": "asking_about_mother_work"
+        }
+      ]
+    },
+    {
+      "id": "lesson_04",
+      "category": "food_and_cooking",
+      "title": "Food and Meals",
+      "difficulty": "intermediate",
+      "conversations": [
+        {
+          "english": "What did you have for lunch?",
+          "tulu": "Ir vanas entha tinD?",
+          "context": "asking_about_lunch"
+        },
+        {
+          "english": "I had rice and curry.",
+          "tulu": "yAn akhaṛụ aadi kari tinD.",
+          "context": "telling_about_lunch"
+        },
+        {
+          "english": "Is the food tasty?",
+          "tulu": "onas chandae ullae?",
+          "context": "asking_about_taste"
+        },
+        {
+          "english": "Yes, it's very delicious.",
+          "tulu": "and, tumba chandae ullae.",
+          "context": "praising_food"
+        },
+        {
+          "english": "Can you cook Tulu food?",
+          "tulu": "Ir Tulu onas bareyond ullar?",
+          "context": "asking_about_cooking_ability"
+        }
+      ]
+    },
+    {
+      "id": "lesson_05",
+      "category": "shopping_and_money",
+      "title": "Shopping and Money",
+      "difficulty": "intermediate", 
+      "conversations": [
+        {
+          "english": "How much does this cost?",
+          "tulu": "undu erthe rupai ullae?",
+          "context": "asking_price"
+        },
+        {
+          "english": "This costs 100 rupees.",
+          "tulu": "undu 100 rupai ullae.",
+          "context": "telling_price"
+        },
+        {
+          "english": "Can you reduce the price?",
+          "tulu": "Ir rupai kammi maltare?",
+          "context": "bargaining"
+        },
+        {
+          "english": "I will give you 80 rupees.",
+          "tulu": "yAn 80 rupai kōDae.",
+          "context": "offering_price"
+        },
+        {
+          "english": "Do you have change?",
+          "tulu": "IrDa sūḍa ullae?",
+          "context": "asking_for_change"
+        }
+      ]
+    },
+    {
+      "id": "lesson_06",
+      "category": "time_and_dates",
+      "title": "Time and Dates",
+      "difficulty": "intermediate",
+      "conversations": [
+        {
+          "english": "What time is it now?",
+          "tulu": "ippa entha vela ullae?",
+          "context": "asking_current_time"
+        },
+        {
+          "english": "It's 3:30 PM.",
+          "tulu": "ippa 3:30 vela ullae.",
+          "context": "telling_current_time"
+        },
+        {
+          "english": "What day is today?",
+          "tulu": "indu entha dina ullae?",
+          "context": "asking_day"
+        },
+        {
+          "english": "Today is Monday.",
+          "tulu": "indu somavāra ullae.",
+          "context": "telling_day"
+        },
+        {
+          "english": "When is your birthday?",
+          "tulu": "IrDa janmadina yāva dina ullae?",
+          "context": "asking_birthday"
+        }
+      ]
+    },
+    {
+      "id": "lesson_07",
+      "category": "weather_and_seasons",
+      "title": "Weather and Seasons",
+      "difficulty": "intermediate",
+      "conversations": [
+        {
+          "english": "How is the weather today?",
+          "tulu": "indu vātāvāra encha ullae?",
+          "context": "asking_about_weather"
+        },
+        {
+          "english": "It's very hot today.",
+          "tulu": "indu tumba ushNa ullae.",
+          "context": "describing_hot_weather"
+        },
+        {
+          "english": "Is it raining?",
+          "tulu": "māle barpodu ullae?",
+          "context": "asking_about_rain"
+        },
+        {
+          "english": "Yes, it's raining heavily.",
+          "tulu": "and, tumba māle barpodu ullae.",
+          "context": "describing_heavy_rain"
+        },
+        {
+          "english": "What season is this?",
+          "tulu": "indu entha ritu ullae?",
+          "context": "asking_about_season"
+        }
+      ]
+    },
+    {
+      "id": "lesson_08",
+      "category": "emotions_and_feelings",
+      "title": "Emotions and Feelings",
+      "difficulty": "intermediate",
+      "conversations": [
+        {
+          "english": "How are you feeling?",
+          "tulu": "Ir encha anubhava maltar?",
+          "context": "asking_about_feelings"
+        },
+        {
+          "english": "I am very happy today.",
+          "tulu": "indu yAn tumba ushArullae.",
+          "context": "expressing_happiness"
+        },
+        {
+          "english": "Why are you sad?",
+          "tulu": "Ir entha dukkha ullar?",
+          "context": "asking_about_sadness"
+        },
+        {
+          "english": "I am worried about my work.",
+          "tulu": "yAn enkDa kelasada chinta maltond ullae.",
+          "context": "expressing_worry"
+        },
+        {
+          "english": "Don't worry, everything will be fine.",
+          "tulu": "chinta maltad, ellā chandae aagodu ullae.",
+          "context": "comforting_someone"
+        }
+      ]
+    },
+    {
+      "id": "lesson_09",
+      "category": "travel_and_places",
+      "title": "Travel and Places",
+      "difficulty": "intermediate",
+      "conversations": [
+        {
+          "english": "Where are you going?",
+          "tulu": "Ir enka pōpade?",
+          "context": "asking_destination"
+        },
+        {
+          "english": "I am going to Mangalore.",
+          "tulu": "yAn kudlak pōpae.",
+          "context": "telling_destination"
+        },
+        {
+          "english": "How far is it?",
+          "tulu": "adu erthe dūra ullae?",
+          "context": "asking_distance"
+        },
+        {
+          "english": "It's about 50 kilometers.",
+          "tulu": "adu 50 kilometer dūra ullae.",
+          "context": "telling_distance"
+        },
+        {
+          "english": "How will you go there?",
+          "tulu": "Ir enka pōpade?",
+          "context": "asking_transportation"
+        }
+      ]
+    },
+    {
+      "id": "lesson_10",
+      "category": "work_and_education",
+      "title": "Work and Education",
+      "difficulty": "intermediate",
+      "conversations": [
+        {
+          "english": "What do you do for work?",
+          "tulu": "Ir entha kelasa maltar?",
+          "context": "asking_about_job"
+        },
+        {
+          "english": "I am a teacher.",
+          "tulu": "yAn guru ullae.",
+          "context": "telling_about_job"
+        },
+        {
+          "english": "Where do you work?",
+          "tulu": "Ir enka kelasa maltar?",
+          "context": "asking_workplace"
+        },
+        {
+          "english": "I work in a school.",
+          "tulu": "yAn shāleda kelasa maltae.",
+          "context": "telling_workplace"
+        },
+        {
+          "english": "Do you like your job?",
+          "tulu": "Ir enkDa kelasada ishta maltar?",
+          "context": "asking_about_job_satisfaction"
+        }
+      ]
+    }
+  ],
+  "advanced_conversations": [
+    {
+      "id": "adv_01",
+      "category": "advanced_conversations",
+      "title": "Complex Situations",
+      "difficulty": "advanced",
+      "conversations": [
+        {
+          "english": "I need to discuss something important with you.",
+          "tulu": "yAn IrDa sange tumba mahatvada vishaya pāterae bēka ullae.",
+          "context": "requesting_serious_discussion"
+        },
+        {
+          "english": "What is the problem?",
+          "tulu": "entha samasye ullae?",
+          "context": "asking_about_problem"
+        },
+        {
+          "english": "I am facing some difficulties in my business.",
+          "tulu": "yAn enkDa vyāpārada kēḷa kastagalu barpodu ullae.",
+          "context": "explaining_business_problems"
+        },
+        {
+          "english": "Can you help me with this?",
+          "tulu": "Ir enk help maltare?",
+          "context": "requesting_help"
+        },
+        {
+          "english": "Of course, I will do whatever I can.",
+          "tulu": "and, yAn enkDa sādhyavada ellā maltae.",
+          "context": "offering_help"
+        }
+      ]
+    }
+  ],
+  "idiomatic_expressions": [
+    {
+      "english": "It's raining cats and dogs.",
+      "tulu": "tumba māle barpodu ullae.",
+      "context": "heavy_rain_expression"
+    },
+    {
+      "english": "Don't count your chickens before they hatch.",
+      "tulu": "aagae aagae chinta maltad.",
+      "context": "don't_worry_early"
+    },
+    {
+      "english": "Every cloud has a silver lining.",
+      "tulu": "ellā kastad kooda chandae ullae.",
+      "context": "positive_outlook"
+    },
+    {
+      "english": "Actions speak louder than words.",
+      "tulu": "maltond kēḷa pāterond kēḷa tumba chandae ullae.",
+      "context": "actions_vs_words"
+    }
+  ],
+  "cultural_context": [
+    {
+      "context": "festival_greeting",
+      "english": "Happy Diwali!",
+      "tulu": "Diwali chandae ullae!",
+      "explanation": "Traditional festival greeting"
+    },
+    {
+      "context": "respectful_address",
+      "english": "Respected sir/madam",
+      "tulu": "ādaraneeya",
+      "explanation": "Formal respectful address"
+    },
+    {
+      "context": "blessing",
+      "english": "May God bless you",
+      "tulu": "daivada āshirvāda irDa sange ullae",
+      "explanation": "Traditional blessing"
+    }
+  ]
+}

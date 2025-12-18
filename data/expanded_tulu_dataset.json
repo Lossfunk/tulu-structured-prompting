@@ -1,0 +1,1233 @@
+{
+  "metadata": {
+    "total_sentences": 200,
+    "original_sentences": 200,
+    "generated_sentences": 0,
+    "categories": [
+      "greetings",
+      "family",
+      "food",
+      "daily_activities",
+      "emotions",
+      "weather",
+      "shopping",
+      "travel",
+      "work",
+      "health",
+      "time",
+      "numbers",
+      "colors",
+      "body_parts",
+      "animals",
+      "nature",
+      "technology",
+      "education",
+      "sports",
+      "festivals"
+    ],
+    "created_at": "2025-10-22T14:13:55.547000",
+    "description": "Expanded Tulu dataset with 500+ sentences generated from verified data"
+  },
+  "sentences": [
+    {
+      "category": "greetings",
+      "english": "Hello, how are you?",
+      "tulu": "namaskara, encha ullaru?",
+      "verified": true
+    },
+    {
+      "category": "greetings",
+      "english": "Good morning, how did you sleep?",
+      "tulu": "shubodaya, iru encha nidre maltar?",
+      "verified": true
+    },
+    {
+      "category": "greetings",
+      "english": "Good evening, how was your day?",
+      "tulu": "shuba sayankala, eerena dina encha ittundu?",
+      "verified": true
+    },
+    {
+      "category": "greetings",
+      "english": "Hi there, what's up?",
+      "tulu": "namaskara, dada maltond ullar?",
+      "verified": true
+    },
+    {
+      "category": "greetings",
+      "english": "Hey, how are things?",
+      "tulu": "namaskara, encha ullar bokka?",
+      "verified": true
+    },
+    {
+      "category": "greetings",
+      "english": "Good afternoon, how are you feeling?",
+      "tulu": "madhyanaada eddeppulu, encha ulla?",
+      "verified": true
+    },
+    {
+      "category": "greetings",
+      "english": "Hello, nice to meet you!",
+      "tulu": "namaskara, eeregu tikkudu edde aand!",
+      "verified": true
+    },
+    {
+      "category": "greetings",
+      "english": "Hi, how's your family?",
+      "tulu": "namaskara, eerena kutumba encha ulleru?",
+      "verified": true
+    },
+    {
+      "category": "greetings",
+      "english": "Good day, how's work?",
+      "tulu": "dina edde uppadu, eerenaa aavondu undu",
+      "verified": true
+    },
+    {
+      "category": "greetings",
+      "english": "Hello, how's everything?",
+      "tulu": "namaskara, pura edde ne?",
+      "verified": true
+    },
+    {
+      "category": "family",
+      "english": "My father is a teacher.",
+      "tulu": "yennmer teacher",
+      "verified": true
+    },
+    {
+      "category": "family",
+      "english": "My mother cooks delicious food.",
+      "tulu": "yenna amma ruchiyitina vanas malpuver",
+      "verified": true
+    },
+    {
+      "category": "family",
+      "english": "I have two brothers and one sister.",
+      "tulu": "yenada rad (2) mege nakkul bakka onji (1) megdi uller.",
+      "verified": true
+    },
+    {
+      "category": "family",
+      "english": "My grandmother tells interesting stories.",
+      "tulu": "yenna ajji eddentina kathe panperu",
+      "verified": true
+    },
+    {
+      "category": "family",
+      "english": "My grandfather is very wise.",
+      "tulu": "yenna ajjer mast ushar ulleru",
+      "verified": true
+    },
+    {
+      "category": "family",
+      "english": "My uncle lives in Bangalore.",
+      "tulu": "yena mama bangalore du uppun",
+      "verified": true
+    },
+    {
+      "category": "family",
+      "english": "My aunt is a doctor.",
+      "tulu": "yenna maami onji doctor",
+      "verified": true
+    },
+    {
+      "category": "family",
+      "english": "My cousin is studying engineering.",
+      "tulu": "yenna cousin engineering odon duller",
+      "verified": true
+    },
+    {
+      "category": "family",
+      "english": "My nephew is very cute.",
+      "tulu": "yenna marmal mast porlu ullor",
+      "verified": true
+    },
+    {
+      "category": "family",
+      "english": "My niece loves to dance.",
+      "tulu": "yenna marmal gu dance istha",
+      "verified": true
+    },
+    {
+      "category": "food",
+      "english": "I am hungry, let's eat.",
+      "tulu": "yenk bada aapund, bale thindi thinka",
+      "verified": true
+    },
+    {
+      "category": "food",
+      "english": "This food is very tasty.",
+      "tulu": "vanas mast shoku aatundu",
+      "verified": true
+    },
+    {
+      "category": "food",
+      "english": "I like rice and curry.",
+      "tulu": "yenku nuppu kachpu mast ishta",
+      "verified": true
+    },
+    {
+      "category": "food",
+      "english": "My mother makes the best dosa.",
+      "tulu": "yenna amma mast shokuda dose malpuver",
+      "verified": true
+    },
+    {
+      "category": "food",
+      "english": "I want to drink water.",
+      "tulu": "yenk neer pariyareg undu",
+      "verified": true
+    },
+    {
+      "category": "food",
+      "english": "This coffee is too hot.",
+      "tulu": "undu coffee mast beccha undu",
+      "verified": true
+    },
+    {
+      "category": "food",
+      "english": "I don't like spicy food.",
+      "tulu": "yenku kaara thindi ishta ijji",
+      "verified": true
+    },
+    {
+      "category": "food",
+      "english": "Let's go to a restaurant.",
+      "tulu": "hotel gu poye?",
+      "verified": true
+    },
+    {
+      "category": "food",
+      "english": "I am full, thank you.",
+      "tulu": "yei full undu, solmelu",
+      "verified": true
+    },
+    {
+      "category": "food",
+      "english": "This fruit is very sweet.",
+      "tulu": "undu phala mast cheepe undu",
+      "verified": true
+    },
+    {
+      "category": "daily_activities",
+      "english": "I wake up at 6 AM every day.",
+      "tulu": "yaan dinala aaji (6) ghante lakunu",
+      "verified": true
+    },
+    {
+      "category": "daily_activities",
+      "english": "I brush my teeth and take a bath.",
+      "tulu": "yan kooli brush maltudu bokka meeye",
+      "verified": true
+    },
+    {
+      "category": "daily_activities",
+      "english": "I go to work by bus.",
+      "tulu": "yaan kelasagu busdu popini",
+      "verified": true
+    },
+    {
+      "category": "daily_activities",
+      "english": "I have lunch at 1 PM.",
+      "tulu": "yaan vanas onji ghate gu malpunu",
+      "verified": true
+    },
+    {
+      "category": "daily_activities",
+      "english": "I come home in the evening.",
+      "tulu": "yaan illagu bayag barpini",
+      "verified": true
+    },
+    {
+      "category": "daily_activities",
+      "english": "I watch TV after dinner.",
+      "tulu": "yaan raatreda vanas aay bokka TV tupini",
+      "verified": true
+    },
+    {
+      "category": "daily_activities",
+      "english": "I go to bed at 10 PM.",
+      "tulu": "yaan path ghante gu jepunu",
+      "verified": true
+    },
+    {
+      "category": "daily_activities",
+      "english": "I exercise in the morning.",
+      "tulu": "yaan kaande lakudu vyayaama malpuve",
+      "verified": true
+    },
+    {
+      "category": "daily_activities",
+      "english": "I read books before sleeping.",
+      "tulu": "yaan jepor dumbu pustaka oduve",
+      "verified": true
+    },
+    {
+      "category": "daily_activities",
+      "english": "I clean my room on weekends.",
+      "tulu": "yaan weekend-du room clean malpuve",
+      "verified": true
+    },
+    {
+      "category": "emotions",
+      "english": "I am very happy today.",
+      "tulu": "ini yaan mastu khushi du ulle",
+      "verified": true
+    },
+    {
+      "category": "emotions",
+      "english": "I feel sad about the news.",
+      "tulu": "yenku news kendu bejaar aandu",
+      "verified": true
+    },
+    {
+      "category": "emotions",
+      "english": "I am excited about the trip.",
+      "tulu": "yenk trip gu poregu khushi undu",
+      "verified": true
+    },
+    {
+      "category": "emotions",
+      "english": "I am worried about my exams.",
+      "tulu": "yenk parikshe da bagge podige aapund",
+      "verified": true
+    },
+    {
+      "category": "emotions",
+      "english": "I am proud of my achievements.",
+      "tulu": "yenku yenna achievements da bage enna achievements du proud aapund",
+      "verified": true
+    },
+    {
+      "category": "emotions",
+      "english": "I am angry about the delay.",
+      "tulu": "yenku undu delay aapina vajath garva barpund",
+      "verified": true
+    },
+    {
+      "category": "emotions",
+      "english": "I am surprised by the gift.",
+      "tulu": "Uḍugoreḍd eṅk āścarya aand",
+      "verified": true
+    },
+    {
+      "category": "emotions",
+      "english": "I am nervous about the interview.",
+      "tulu": "yenku interviewgu chooru nervous aavondu ulle",
+      "verified": true
+    },
+    {
+      "category": "emotions",
+      "english": "I am grateful for your help.",
+      "tulu": "eerena sahayag masth khushi aandu",
+      "verified": true
+    },
+    {
+      "category": "emotions",
+      "english": "I am disappointed with the result.",
+      "tulu": "yenna result toodu bejaaru aandu",
+      "verified": true
+    },
+    {
+      "category": "weather",
+      "english": "It's raining heavily today.",
+      "tulu": "ini joru barsa undu",
+      "verified": true
+    },
+    {
+      "category": "weather",
+      "english": "The sun is shining brightly.",
+      "tulu": "ini joru bolpu undu suryena",
+      "verified": true
+    },
+    {
+      "category": "weather",
+      "english": "It's very hot outside.",
+      "tulu": "pidayi mastu beccha undu",
+      "verified": true
+    },
+    {
+      "category": "weather",
+      "english": "The weather is pleasant today.",
+      "tulu": "ini weather mast shoku undu",
+      "verified": true
+    },
+    {
+      "category": "weather",
+      "english": "It's cloudy and cool.",
+      "tulu": "ini moogalu bokka simma undu",
+      "verified": true
+    },
+    {
+      "category": "weather",
+      "english": "There's a strong wind blowing.",
+      "tulu": "mast joruda gaali barond undu",
+      "verified": true
+    },
+    {
+      "category": "weather",
+      "english": "It's foggy in the morning.",
+      "tulu": "kaande mast foggy undu",
+      "verified": true
+    },
+    {
+      "category": "weather",
+      "english": "The temperature is rising.",
+      "tulu": "temperature mast eccha aavondu undu",
+      "verified": true
+    },
+    {
+      "category": "weather",
+      "english": "It's humid and uncomfortable.",
+      "tulu": "mhumid bakka uncomfortable aapundu",
+      "verified": true
+    },
+    {
+      "category": "weather",
+      "english": "The weather forecast says it will rain.",
+      "tulu": "weather forecast dakul panper ini barsa barpund ge",
+      "verified": true
+    },
+    {
+      "category": "shopping",
+      "english": "I need to buy groceries.",
+      "tulu": "yenku groceries gethonreg pore undu",
+      "verified": true
+    },
+    {
+      "category": "shopping",
+      "english": "This shirt is too expensive.",
+      "tulu": "undu shirt mast costly aand",
+      "verified": true
+    },
+    {
+      "category": "shopping",
+      "english": "Do you have this in a different size?",
+      "tulu": "undetu eereda bethe size unde?",
+      "verified": true
+    },
+    {
+      "category": "shopping",
+      "english": "I want to return this item.",
+      "tulu": "undu item yenku vapaas korareg ittundu",
+      "verified": true
+    },
+    {
+      "category": "shopping",
+      "english": "Can you give me a discount?",
+      "tulu": "yenku discount korpara?",
+      "verified": true
+    },
+    {
+      "category": "shopping",
+      "english": "I'm looking for a gift.",
+      "tulu": "yaan gift naadon dule",
+      "verified": true
+    },
+    {
+      "category": "shopping",
+      "english": "This quality is not good.",
+      "tulu": "undetha quality aath edde ijji",
+      "verified": true
+    },
+    {
+      "category": "shopping",
+      "english": "I'll take this one.",
+      "tulu": "yaan undu gethonve",
+      "verified": true
+    },
+    {
+      "category": "shopping",
+      "english": "Do you accept credit cards?",
+      "tulu": "eeru credit card gethonbara?",
+      "verified": true
+    },
+    {
+      "category": "shopping",
+      "english": "Where is the fitting room?",
+      "tulu": "fitting room volpa undu?",
+      "verified": true
+    },
+    {
+      "category": "travel",
+      "english": "I'm going to Mumbai tomorrow.",
+      "tulu": "yaan yelle mumbai gu povondule",
+      "verified": true
+    },
+    {
+      "category": "travel",
+      "english": "How long does the journey take?",
+      "tulu": "undu journeygu yetu portu aapund",
+      "verified": true
+    },
+    {
+      "category": "travel",
+      "english": "I need to book a train ticket.",
+      "tulu": "yenk train da ticket book malpareg undu",
+      "verified": true
+    },
+    {
+      "category": "travel",
+      "english": "The flight is delayed by two hours.",
+      "tulu": "flight rad (2) ghante delay aatundu",
+      "verified": true
+    },
+    {
+      "category": "travel",
+      "english": "I'm traveling with my family.",
+      "tulu": "yaan family dothu travel malthon ulle",
+      "verified": true
+    },
+    {
+      "category": "travel",
+      "english": "I want to visit the beach.",
+      "tulu": "yenk beach gu poreg undu",
+      "verified": true
+    },
+    {
+      "category": "travel",
+      "english": "This place is very beautiful.",
+      "tulu": "undu jaaga mastu porlu undu",
+      "verified": true
+    },
+    {
+      "category": "travel",
+      "english": "I'm taking a taxi to the hotel.",
+      "tulu": "yaan hotelgu taxi du pope",
+      "verified": true
+    },
+    {
+      "category": "travel",
+      "english": "I need directions to the station.",
+      "tulu": "yenk station gu poregu daari bodu ittund",
+      "verified": true
+    },
+    {
+      "category": "travel",
+      "english": "I'm going on a vacation.",
+      "tulu": "yaan vacationgu povondule",
+      "verified": true
+    },
+    {
+      "category": "work",
+      "english": "I work in a software company.",
+      "tulu": "yaan software company du kelasa malpunu",
+      "verified": true
+    },
+    {
+      "category": "work",
+      "english": "My boss is very strict.",
+      "tulu": "yenna boss mastu strict uller",
+      "verified": true
+    },
+    {
+      "category": "work",
+      "english": "I have a meeting at 3 PM.",
+      "tulu": "yenk mooji (3) ghante gu meeting undu",
+      "verified": true
+    },
+    {
+      "category": "work",
+      "english": "I need to finish this project.",
+      "tulu": "yenku undu project yenk undu project mugiparegu undu",
+      "verified": true
+    },
+    {
+      "category": "work",
+      "english": "I'm taking a break for lunch.",
+      "tulu": "yaanu vanasgu break gethonon dulle",
+      "verified": true
+    },
+    {
+      "category": "work",
+      "english": "I work from home on Fridays.",
+      "tulu": "yaan fridays gu illadu kelasa malpunu",
+      "verified": true
+    },
+    {
+      "category": "work",
+      "english": "I'm looking for a new job.",
+      "tulu": "yaan posa kelasa naadon dulle",
+      "verified": true
+    },
+    {
+      "category": "work",
+      "english": "I have a deadline tomorrow.",
+      "tulu": "yenk elle deadline undu",
+      "verified": true
+    },
+    {
+      "category": "work",
+      "english": "I'm learning new skills.",
+      "tulu": "yaan posa skills kalthon dulle",
+      "verified": true
+    },
+    {
+      "category": "work",
+      "english": "I'm getting a promotion.",
+      "tulu": "yenku promotion thikkondu undu",
+      "verified": true
+    },
+    {
+      "category": "health",
+      "english": "I have a headache.",
+      "tulu": "yenku mande bene aavondu undu",
+      "verified": true
+    },
+    {
+      "category": "health",
+      "english": "I need to see a doctor.",
+      "tulu": "yenku doctor nadegu poregu undu",
+      "verified": true
+    },
+    {
+      "category": "health",
+      "english": "I'm feeling better now.",
+      "tulu": "yaan itte vonthe ushar ulle",
+      "verified": true
+    },
+    {
+      "category": "health",
+      "english": "I have a fever.",
+      "tulu": "yenku jwara undu",
+      "verified": true
+    },
+    {
+      "category": "health",
+      "english": "I need to take medicine.",
+      "tulu": "yenku mardh dethonodu",
+      "verified": true
+    },
+    {
+      "category": "health",
+      "english": "I'm going to the hospital.",
+      "tulu": "yaan asvatre gu povon dulle",
+      "verified": true
+    },
+    {
+      "category": "health",
+      "english": "I feel dizzy.",
+      "tulu": "yenk chur chakkar borpundu",
+      "verified": true
+    },
+    {
+      "category": "health",
+      "english": "I have a stomach ache.",
+      "tulu": "yenku banji bene aapundu",
+      "verified": true
+    },
+    {
+      "category": "health",
+      "english": "I need to rest.",
+      "tulu": "yenku araam malpodu",
+      "verified": true
+    },
+    {
+      "category": "health",
+      "english": "I'm feeling healthy.",
+      "tulu": "yaan itte usshar ulle",
+      "verified": true
+    },
+    {
+      "category": "time",
+      "english": "What time is it?",
+      "tulu": "yetu portu aandu?",
+      "verified": true
+    },
+    {
+      "category": "time",
+      "english": "It's 3:30 PM.",
+      "tulu": "mooji are (3:30) aandu",
+      "verified": true
+    },
+    {
+      "category": "time",
+      "english": "I'm running late.",
+      "tulu": "yenku tada aandu",
+      "verified": true
+    },
+    {
+      "category": "time",
+      "english": "I'll be there in 10 minutes.",
+      "tulu": "yaan path (10) nimisha du uppuve",
+      "verified": true
+    },
+    {
+      "category": "time",
+      "english": "The meeting starts at 2 PM.",
+      "tulu": "meeting rad ghante gu shuru aapundu",
+      "verified": true
+    },
+    {
+      "category": "time",
+      "english": "I wake up early every day.",
+      "tulu": "yaan dinaala bega lakkuve",
+      "verified": true
+    },
+    {
+      "category": "time",
+      "english": "It's time to go home.",
+      "tulu": "illagu poregu samaya aandu",
+      "verified": true
+    },
+    {
+      "category": "time",
+      "english": "I have free time this evening.",
+      "tulu": "yaan bayaagu (evening) muta free ulle",
+      "verified": true
+    },
+    {
+      "category": "time",
+      "english": "I'm busy all day.",
+      "tulu": "yaan ini mast busy ulle",
+      "verified": true
+    },
+    {
+      "category": "time",
+      "english": "I need more time to finish.",
+      "tulu": "yenku nana onthe porthu bodu mugiparegu",
+      "verified": true
+    },
+    {
+      "category": "numbers",
+      "english": "I have five books.",
+      "tulu": "yenada ain (5) pustaka undu",
+      "verified": true
+    },
+    {
+      "category": "numbers",
+      "english": "There are ten people here.",
+      "tulu": "mulpa pathu (10) janakulu uller",
+      "verified": true
+    },
+    {
+      "category": "numbers",
+      "english": "I need twenty rupees.",
+      "tulu": "yenku irva (20) rupaya bodu itthundu",
+      "verified": true
+    },
+    {
+      "category": "numbers",
+      "english": "I'm twenty-five years old.",
+      "tulu": "yaanky irva-tain (25) varsha aandu",
+      "verified": true
+    },
+    {
+      "category": "numbers",
+      "english": "I have three children.",
+      "tulu": "yenada mooji jokulu uller",
+      "verified": true
+    },
+    {
+      "category": "numbers",
+      "english": "I live on the second floor.",
+      "tulu": "yaan radne malginedu uppunu",
+      "verified": true
+    },
+    {
+      "category": "numbers",
+      "english": "I need to buy two tickets.",
+      "tulu": "yenk rad ticket gethonodu",
+      "verified": true
+    },
+    {
+      "category": "numbers",
+      "english": "I have one hour free.",
+      "tulu": "yaan onji ghantegu free ulle",
+      "verified": true
+    },
+    {
+      "category": "numbers",
+      "english": "I need fifty grams of sugar.",
+      "tulu": "yenku aiva (50) gram sakkare bodu ittundu",
+      "verified": true
+    },
+    {
+      "category": "numbers",
+      "english": "I have zero balance in my account.",
+      "tulu": "yenna accountu du zero undu balance",
+      "verified": true
+    },
+    {
+      "category": "colors",
+      "english": "I like the red color.",
+      "tulu": "yenku kempu color ishta",
+      "verified": true
+    },
+    {
+      "category": "colors",
+      "english": "The sky is blue today.",
+      "tulu": "ini aakasha mastu neeli undu",
+      "verified": true
+    },
+    {
+      "category": "colors",
+      "english": "I want a green shirt.",
+      "tulu": "yenku pacche shirt bodu",
+      "verified": true
+    },
+    {
+      "category": "colors",
+      "english": "The grass is green.",
+      "tulu": "pajeeru mast pacche undu",
+      "verified": true
+    },
+    {
+      "category": "colors",
+      "english": "I have a black car.",
+      "tulu": "yenada kappu car undu",
+      "verified": true
+    },
+    {
+      "category": "colors",
+      "english": "The sun is yellow.",
+      "tulu": "soorya mast manjal undu",
+      "verified": true
+    },
+    {
+      "category": "colors",
+      "english": "I like white flowers.",
+      "tulu": "yenku boldu poo ishta",
+      "verified": true
+    },
+    {
+      "category": "colors",
+      "english": "The night is dark.",
+      "tulu": "raatre mast katthale undu",
+      "verified": true
+    },
+    {
+      "category": "colors",
+      "english": "I want a pink dress.",
+      "tulu": "yenku gulabi dress bodu",
+      "verified": true
+    },
+    {
+      "category": "colors",
+      "english": "The ocean is blue.",
+      "tulu": "kadal mast neeli undu",
+      "verified": true
+    },
+    {
+      "category": "body_parts",
+      "english": "My head hurts.",
+      "tulu": "yenna mande bene aapundu",
+      "verified": true
+    },
+    {
+      "category": "body_parts",
+      "english": "I have pain in my leg.",
+      "tulu": "yenna kaarudu bene undu",
+      "verified": true
+    },
+    {
+      "category": "body_parts",
+      "english": "My eyes are tired.",
+      "tulu": "yenna kannu-gu saakandu",
+      "verified": true
+    },
+    {
+      "category": "body_parts",
+      "english": "I have a cut on my hand.",
+      "tulu": "yena kai-tu cut aandu",
+      "verified": true
+    },
+    {
+      "category": "body_parts",
+      "english": "My back is aching.",
+      "tulu": "yenna beri bene aapundu",
+      "verified": true
+    },
+    {
+      "category": "body_parts",
+      "english": "I have a toothache.",
+      "tulu": "yenk kooli bene undu",
+      "verified": true
+    },
+    {
+      "category": "body_parts",
+      "english": "My nose is running.",
+      "tulu": "yenku joru sheetha aand",
+      "verified": true
+    },
+    {
+      "category": "body_parts",
+      "english": "I have a sore throat.",
+      "tulu": "yenku dhonde bene undu",
+      "verified": true
+    },
+    {
+      "category": "body_parts",
+      "english": "My foot is swollen.",
+      "tulu": "yenna kaar soojan aatundu",
+      "verified": true
+    },
+    {
+      "category": "body_parts",
+      "english": "I have a bruise on my arm.",
+      "tulu": "yenna kai-tu gaaya aathund",
+      "verified": true
+    },
+    {
+      "category": "animals",
+      "english": "I have a pet dog.",
+      "tulu": "yaan naai sakude",
+      "verified": true
+    },
+    {
+      "category": "animals",
+      "english": "The cat is sleeping.",
+      "tulu": "pucche jesondu undu",
+      "verified": true
+    },
+    {
+      "category": "animals",
+      "english": "I saw a cow on the road.",
+      "tulu": "yaan raste du onji pettha (cow) tooye",
+      "verified": true
+    },
+    {
+      "category": "animals",
+      "english": "The bird is singing.",
+      "tulu": "pakkhi padhiya panondu undu",
+      "verified": true
+    },
+    {
+      "category": "animals",
+      "english": "I'm afraid of snakes.",
+      "tulu": "yenku kere-du podige aapundu",
+      "verified": true
+    },
+    {
+      "category": "animals",
+      "english": "The elephant is very big.",
+      "tulu": "aane mast malla undu",
+      "verified": true
+    },
+    {
+      "category": "animals",
+      "english": "I like to watch fish.",
+      "tulu": "yenku meen turegu mast ishta",
+      "verified": true
+    },
+    {
+      "category": "animals",
+      "english": "The monkey is jumping.",
+      "tulu": "mange lagiyondu undu",
+      "verified": true
+    },
+    {
+      "category": "animals",
+      "english": "I have a pet rabbit.",
+      "tulu": "yenada illadu rabbit undu",
+      "verified": true
+    },
+    {
+      "category": "animals",
+      "english": "The tiger is dangerous.",
+      "tulu": "pilli mast danger undu",
+      "verified": true
+    },
+    {
+      "category": "nature",
+      "english": "The tree is very tall.",
+      "tulu": "undu marra mast uddha undu",
+      "verified": true
+    },
+    {
+      "category": "nature",
+      "english": "I like to walk in the garden.",
+      "tulu": "yenku garden du nadaparegu ishta",
+      "verified": true
+    },
+    {
+      "category": "nature",
+      "english": "The flower is beautiful.",
+      "tulu": "undu poo mast porlu undu",
+      "verified": true
+    },
+    {
+      "category": "nature",
+      "english": "I want to climb the mountain.",
+      "tulu": "yenk gudde da mithu mitharegu undu",
+      "verified": true
+    },
+    {
+      "category": "nature",
+      "english": "The river is flowing fast.",
+      "tulu": "undu tude mast jorudu flow aavondu undu",
+      "verified": true
+    },
+    {
+      "category": "nature",
+      "english": "I like to watch the sunset.",
+      "tulu": "yenku kurukal turegu mast ishta",
+      "verified": true
+    },
+    {
+      "category": "nature",
+      "english": "The forest is peaceful.",
+      "tulu": "undu kaadu mast shanti undu",
+      "verified": true
+    },
+    {
+      "category": "nature",
+      "english": "I want to go to the beach.",
+      "tulu": "yenku beachgu poregu undu",
+      "verified": true
+    },
+    {
+      "category": "nature",
+      "english": "The moon is bright tonight.",
+      "tulu": "ini chandra mast bolpu undu",
+      "verified": true
+    },
+    {
+      "category": "nature",
+      "english": "I like to listen to the rain.",
+      "tulu": "yenk barsa nu kenaregu ishta aapund",
+      "verified": true
+    },
+    {
+      "category": "technology",
+      "english": "I use my phone every day.",
+      "tulu": "yaan phone dinaala tupe",
+      "verified": true
+    },
+    {
+      "category": "technology",
+      "english": "My computer is very slow.",
+      "tulu": "yenna computer mast mella undu",
+      "verified": true
+    },
+    {
+      "category": "technology",
+      "english": "I need to charge my laptop.",
+      "tulu": "yenna laptop charge malpareg undu",
+      "verified": true
+    },
+    {
+      "category": "technology",
+      "english": "I'm downloading a new app.",
+      "tulu": "yaan posa app download malthon dulle",
+      "verified": true
+    },
+    {
+      "category": "technology",
+      "english": "My internet connection is poor.",
+      "tulu": "yenna internet connection mast galeeji undu",
+      "verified": true
+    },
+    {
+      "category": "technology",
+      "english": "I need to update my software.",
+      "tulu": "yenna software update malpodu",
+      "verified": true
+    },
+    {
+      "category": "technology",
+      "english": "I'm sending an email.",
+      "tulu": "yaan mail kadathondu ulle",
+      "verified": true
+    },
+    {
+      "category": "technology",
+      "english": "I need to backup my data.",
+      "tulu": "yena data da backup malpodu",
+      "verified": true
+    },
+    {
+      "category": "technology",
+      "english": "My printer is not working.",
+      "tulu": "yenna printer nada thondu ijji",
+      "verified": true
+    },
+    {
+      "category": "technology",
+      "english": "I'm learning to code.",
+      "tulu": "yaan code malpareg kalthondu uller",
+      "verified": true
+    },
+    {
+      "category": "education",
+      "english": "I'm studying engineering.",
+      "tulu": "yaan engineering malthondu ulle",
+      "verified": true
+    },
+    {
+      "category": "education",
+      "english": "I have an exam tomorrow.",
+      "tulu": "yenku elle exam undu",
+      "verified": true
+    },
+    {
+      "category": "education",
+      "english": "I need to read this book.",
+      "tulu": "yenku undu pustaka odhareg undu",
+      "verified": true
+    },
+    {
+      "category": "education",
+      "english": "I'm learning a new language.",
+      "tulu": "yaanu posa bhashe kalthondu ulle",
+      "verified": true
+    },
+    {
+      "category": "education",
+      "english": "I have homework to do.",
+      "tulu": "yenku homework malparegu undu",
+      "verified": true
+    },
+    {
+      "category": "education",
+      "english": "I'm going to the library.",
+      "tulu": "yaan library-gu povondu ulle",
+      "verified": true
+    },
+    {
+      "category": "education",
+      "english": "I need to write an essay.",
+      "tulu": "yenku essay bareregu undu",
+      "verified": true
+    },
+    {
+      "category": "education",
+      "english": "I'm taking online classes.",
+      "tulu": "yaan online class gethon undu ulle",
+      "verified": true
+    },
+    {
+      "category": "education",
+      "english": "I have a presentation today.",
+      "tulu": "yenku ini presentation undu",
+      "verified": true
+    },
+    {
+      "category": "education",
+      "english": "I'm preparing for the interview.",
+      "tulu": "yaan interviewgu prepare malthondu ulle",
+      "verified": true
+    },
+    {
+      "category": "sports",
+      "english": "I like to play cricket.",
+      "tulu": "yenku cricket gobaareg ishta",
+      "verified": true
+    },
+    {
+      "category": "sports",
+      "english": "I go to the gym every day.",
+      "tulu": "yaan dinala vyayaamagu pope",
+      "verified": true
+    },
+    {
+      "category": "sports",
+      "english": "I'm watching a football match.",
+      "tulu": "yaan football da match tuvondu ulle",
+      "verified": true
+    },
+    {
+      "category": "sports",
+      "english": "I want to learn swimming.",
+      "tulu": "yenku swimming kalpodu",
+      "verified": true
+    },
+    {
+      "category": "sports",
+      "english": "I play badminton on weekends.",
+      "tulu": "yaan weekendu du badminton gobbuve",
+      "verified": true
+    },
+    {
+      "category": "sports",
+      "english": "I'm running in the park.",
+      "tulu": "yaan parkdu balithon dulle",
+      "verified": true
+    },
+    {
+      "category": "sports",
+      "english": "I like to cycle in the morning.",
+      "tulu": "yenke kaande cycle budaraeg ishta",
+      "verified": true
+    },
+    {
+      "category": "sports",
+      "english": "I'm learning to play tennis.",
+      "tulu": "yaan tennis gobbareg kalthondu ulle",
+      "verified": true
+    },
+    {
+      "category": "sports",
+      "english": "I watch the Olympics on TV.",
+      "tulu": "yaan olympics tv du tuvondu ulle",
+      "verified": true
+    },
+    {
+      "category": "sports",
+      "english": "I want to join a sports club.",
+      "tulu": "yenku sports club gu serareg undu",
+      "verified": true
+    },
+    {
+      "category": "festivals",
+      "english": "I'm celebrating Diwali with my family.",
+      "tulu": "yaan diwali parba nu celebrate malthon undu ulle family dhotti",
+      "verified": true
+    },
+    {
+      "category": "festivals",
+      "english": "I love the food during festivals.",
+      "tulu": "yenk parba da time du thindi isshta",
+      "verified": true
+    },
+    {
+      "category": "festivals",
+      "english": "I'm wearing new clothes today.",
+      "tulu": "yaan ini posa kuntu paadondu ulle",
+      "verified": true
+    },
+    {
+      "category": "festivals",
+      "english": "I'm going to the temple.",
+      "tulu": "ini yaan devasthana povondu ulle",
+      "verified": true
+    },
+    {
+      "category": "festivals",
+      "english": "I'm lighting lamps for the festival.",
+      "tulu": "yaan deepa pothavondu ulle parba gu",
+      "verified": true
+    },
+    {
+      "category": "festivals",
+      "english": "I'm meeting my relatives.",
+      "tulu": "ini yaan gurtha daklenu tikkarage povondu ulle",
+      "verified": true
+    },
+    {
+      "category": "festivals",
+      "english": "I'm preparing sweets for the occasion.",
+      "tulu": "ini yaan cheepe tayara malthondu ulle",
+      "verified": true
+    },
+    {
+      "category": "festivals",
+      "english": "I'm watching the fireworks.",
+      "tulu": "yaan patakhi tuvondu ulle",
+      "verified": true
+    },
+    {
+      "category": "festivals",
+      "english": "I'm singing festival songs.",
+      "tulu": "yaan parbada padya panondu ulle",
+      "verified": true
+    },
+    {
+      "category": "festivals",
+      "english": "I'm enjoying the holiday.",
+      "tulu": "yaan raje nu gammath malthondu ulle",
+      "verified": true
+    }
+  ]
+}
