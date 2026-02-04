@@ -104,7 +104,7 @@ CRITICAL: Every response must be in Tulu. Do not use Kannada, English, or any ot
             constraints: List of {kannada_word, tulu_alternative, pos} mappings (minimum 50)
         """
         parts = ["## CRITICAL VOCABULARY RESTRICTIONS (600 tokens)\n"]
-        parts.append("NEVER use these Kannada words. Use Tulu equivalents:\n")
+        parts.append("NEVER use these Kannada words. Use Tulu equivalents. NON-NEGOTIABLE.\n")
         parts.append("Kannada → Tulu\n")
         
         for constraint in constraints:
@@ -112,7 +112,7 @@ CRITICAL: Every response must be in Tulu. Do not use Kannada, English, or any ot
             tulu = constraint.get("tulu_alternative", "")
             parts.append(f"{kannada} → {tulu}")
         
-        parts.append("\nBefore generating ANY response, verify you are using Tulu words, NOT Kannada words.")
+        parts.append("\nBefore generating ANY response, verify you are using Tulu words, NOT Kannada words. This is CRITICAL and NON-NEGOTIABLE.")
         
         return "\n".join(parts)
     

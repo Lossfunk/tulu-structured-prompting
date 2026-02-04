@@ -34,6 +34,8 @@ def load_test_set(test_set_path: str = "data/tulu_test.json"):
         return data["test"]
     elif "examples" in data:
         return data["examples"]
+    elif "sentences" in data:
+        return data["sentences"]
     else:
         return []
 
@@ -118,9 +120,28 @@ def main():
     ablation = AblationExperiment(model, few_shot_examples=few_shot)
     results["ablation"] = ablation.run_all_ablations(test_set[:20])
     
-    # 4. Falsification experiment
+    # 4. Paper versions (V1–V4) – matches paper Table
     print("\n" + "=" * 60)
-    print("Experiment 4: Falsification")
+    print("Experiment 4: Paper Versions (V1–V4)")
+    print("=" * 60)
+    paper_v234 = ablation.run_paper_versions(test_set[:20])
+    results["paper_versions"] = {
+        "V1": {
+            "description": "Simple 'respond in Tulu' baseline",
+            "contamination_rate": results["baseline"]["contamination_rate"],
+            "grammar_accuracy": results["baseline"]["grammar_accuracy"],
+            "total_examples": len(test_set[:20]),
+            "note": "From BaselineExperiment"
+        },
+        "V2": paper_v234["versions"]["V2"],
+        "V3": paper_v234["versions"]["V3"],
+        "V4": paper_v234["versions"]["V4"],
+        "model": paper_v234["model"]
+    }
+
+    # 5. Falsification experiment
+    print("\n" + "=" * 60)
+    print("Experiment 5: Falsification")
     print("=" * 60)
     falsification = FalsificationExperiment(model, few_shot_examples=few_shot)
     results["falsification"] = falsification.run_comparison(test_set[:20])
@@ -132,10 +153,16 @@ def main():
     
     print(f"\nResults saved to: {output_path}")
     print("\nSummary:")
-    print(f"  Baseline - Contamination: {results['baseline']['contamination_rate']:.1%}, "
+    print(f"  Baseline (V1) - Contamination: {results['baseline']['contamination_rate']:.1%}, "
           f"Grammar: {results['baseline']['grammar_accuracy']:.1%}")
-    print(f"  Full System - Contamination: {results['full_system']['contamination_rate']:.1%}, "
+    print(f"  Full System (V4) - Contamination: {results['full_system']['contamination_rate']:.1%}, "
           f"Grammar: {results['full_system']['grammar_accuracy']:.1%}")
+    pv = results.get("paper_versions", {})
+    if pv:
+        print("  Paper versions: V1 (baseline), V2 (+grammar), V3 (+constraints), V4 (full)")
+        for v in ["V2", "V3", "V4"]:
+            if v in pv:
+                print(f"    {v} - Contamination: {pv[v]['contamination_rate']:.1%}, Grammar: {pv[v]['grammar_accuracy']:.1%}")
 
 
 if __name__ == "__main__":

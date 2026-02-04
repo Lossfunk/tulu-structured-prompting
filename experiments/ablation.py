@@ -160,3 +160,94 @@ class AblationExperiment:
             }
         }
 
+    def run_paper_versions(self, test_set: List[Dict[str, str]]) -> Dict:
+        """
+        Run paper Table versions V2, V3, V4 (additive).
+        V1 = baseline (simple "respond in Tulu") - run via BaselineExperiment.
+        V2 = Identity + Grammar
+        V3 = Identity + Negative Constraints + Grammar
+        V4 = Full system (Identity + Constraints + Grammar + Few-Shot + Self-Verification)
+        """
+        results = {}
+        self.contamination_eval = ContaminationEvaluator()
+        self.grammar_eval = GrammarAccuracyEvaluator()
+
+        # V2: Identity + Grammar only
+        print("Running paper version V2 (Identity + Grammar)...")
+        responses_v2 = []
+        for i, example in enumerate(test_set):
+            if (i + 1) % 10 == 0:
+                print(f"  V2: {i + 1}/{len(test_set)}...")
+            prompt = self.prompt_builder.build_full_prompt(
+                user_input=example["english"],
+                negative_constraints=[],
+                grammar_rules=self.grammar.get_all_grammar(),
+                few_shot_examples=[],
+                include_self_verification=False
+            )
+            response = self.model.generate(prompt)
+            responses_v2.append({"input": example["english"], "reference": example["tulu"], "prediction": response})
+        preds_v2 = [r["prediction"] for r in responses_v2]
+        results["V2"] = {
+            "description": "Identity + Grammar",
+            "contamination_rate": self.contamination_eval.compute_contamination_rate(preds_v2)["contamination_rate"],
+            "grammar_accuracy": self.grammar_eval.compute_grammar_accuracy(preds_v2)["grammar_accuracy"],
+            "total_examples": len(test_set),
+            "detailed_results": responses_v2
+        }
+
+        # V3: Identity + Constraints + Grammar
+        print("Running paper version V3 (Identity + Constraints + Grammar)...")
+        responses_v3 = []
+        for i, example in enumerate(test_set):
+            if (i + 1) % 10 == 0:
+                print(f"  V3: {i + 1}/{len(test_set)}...")
+            prompt = self.prompt_builder.build_full_prompt(
+                user_input=example["english"],
+                negative_constraints=self.constraints.get_all_constraints(),
+                grammar_rules=self.grammar.get_all_grammar(),
+                few_shot_examples=[],
+                include_self_verification=False
+            )
+            response = self.model.generate(prompt)
+            responses_v3.append({"input": example["english"], "reference": example["tulu"], "prediction": response})
+        preds_v3 = [r["prediction"] for r in responses_v3]
+        results["V3"] = {
+            "description": "Identity + Negative Constraints + Grammar",
+            "contamination_rate": self.contamination_eval.compute_contamination_rate(preds_v3)["contamination_rate"],
+            "grammar_accuracy": self.grammar_eval.compute_grammar_accuracy(preds_v3)["grammar_accuracy"],
+            "total_examples": len(test_set),
+            "detailed_results": responses_v3
+        }
+
+        # V4: Full system
+        print("Running paper version V4 (Full system)...")
+        responses_v4 = []
+        for i, example in enumerate(test_set):
+            if (i + 1) % 10 == 0:
+                print(f"  V4: {i + 1}/{len(test_set)}...")
+            prompt = self.prompt_builder.build_full_prompt(
+                user_input=example["english"],
+                negative_constraints=self.constraints.get_all_constraints(),
+                grammar_rules=self.grammar.get_all_grammar(),
+                few_shot_examples=self.few_shot_examples,
+                include_self_verification=True
+            )
+            response = self.model.generate(prompt)
+            responses_v4.append({"input": example["english"], "reference": example["tulu"], "prediction": response})
+        preds_v4 = [r["prediction"] for r in responses_v4]
+        results["V4"] = {
+            "description": "Full system (+ Few-Shot + Self-Verification)",
+            "contamination_rate": self.contamination_eval.compute_contamination_rate(preds_v4)["contamination_rate"],
+            "grammar_accuracy": self.grammar_eval.compute_grammar_accuracy(preds_v4)["grammar_accuracy"],
+            "total_examples": len(test_set),
+            "detailed_results": responses_v4
+        }
+
+        return {
+            "experiment": "paper_versions",
+            "model": self.model.model_name,
+            "versions": results,
+            "note": "V1 = baseline (run via BaselineExperiment); V2–V4 run here."
+        }
+
