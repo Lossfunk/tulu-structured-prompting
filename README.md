@@ -175,4 +175,3 @@ See `results/README.md` for details.
 - **3-Judge Quality Control**: 1-5 Likert scale, 64% retention
 - **4 Evaluation Metrics**: Contamination, grammar, vocabulary, tokenization
 
-# test-eacl-code
