@@ -1,9 +1,4 @@
-"""
-Evaluation script for fine-tuned Llama 3.2 3B model.
-
-Evaluates the fine-tuned model on test set using the same metrics as
-the prompt-based approach: contamination, grammar accuracy, vocabulary coverage.
-"""
+# Evaluation script for fine-tuned Llama 3.2 3B model.
 
 import os
 import json
@@ -28,24 +23,19 @@ from experiments.finetuning import (
     UNSLOTH_AVAILABLE
 )
 
-# Import evaluators - handle relative imports by properly setting up package structure
-# The evaluation modules use relative imports (from ..constraints), so we need
-# to ensure the package structure is recognized before importing.
 import importlib
 import importlib.util
 
 # Load constraints.negative_constraints first (needed by evaluation.contamination)
 negative_constraints_path = project_root / "constraints" / "negative_constraints.py"
 if negative_constraints_path.exists():
-    # Create constraints package
     if "constraints" not in sys.modules:
         constraints_pkg = type(sys)("constraints")
         constraints_pkg.__path__ = [str(project_root / "constraints")]
         sys.modules["constraints"] = constraints_pkg
-    
-    # Load negative_constraints module with absolute import path
+
     spec = importlib.util.spec_from_file_location(
-        "constraints.negative_constraints", 
+        "constraints.negative_constraints",
         negative_constraints_path
     )
     negative_constraints_mod = importlib.util.module_from_spec(spec)
@@ -53,19 +43,15 @@ if negative_constraints_path.exists():
     sys.modules["constraints.negative_constraints"] = negative_constraints_mod
     spec.loader.exec_module(negative_constraints_mod)
 
-# Now load evaluation modules - patch relative imports to absolute
-# First, ensure evaluation package exists
 if "evaluation" not in sys.modules:
     evaluation_pkg = type(sys)("evaluation")
     evaluation_pkg.__path__ = [str(project_root / "evaluation")]
     sys.modules["evaluation"] = evaluation_pkg
 
-# Also ensure grammar package exists (needed by grammar_accuracy)
 if "grammar" not in sys.modules:
     grammar_pkg = type(sys)("grammar")
     grammar_pkg.__path__ = [str(project_root / "grammar")]
     sys.modules["grammar"] = grammar_pkg
-    # Load tulu_grammar module
     tulu_grammar_path = project_root / "grammar" / "tulu_grammar.py"
     if tulu_grammar_path.exists():
         spec = importlib.util.spec_from_file_location(
@@ -78,12 +64,10 @@ if "grammar" not in sys.modules:
         spec.loader.exec_module(tulu_grammar_mod)
         setattr(grammar_pkg, "tulu_grammar", tulu_grammar_mod)
 
-# Load contamination module - patch relative import
 contamination_path = project_root / "evaluation" / "contamination.py"
 if contamination_path.exists():
     with open(contamination_path, 'r', encoding='utf-8') as f:
         contamination_code = f.read()
-    # Replace relative import with absolute
     contamination_code = contamination_code.replace(
         "from ..constraints.negative_constraints import NegativeConstraints",
         "from constraints.negative_constraints import NegativeConstraints"
@@ -97,12 +81,10 @@ if contamination_path.exists():
 else:
     raise ImportError(f"Could not find contamination.py at {contamination_path}")
 
-# Load grammar_accuracy module - patch relative import
 grammar_path = project_root / "evaluation" / "grammar_accuracy.py"
 if grammar_path.exists():
     with open(grammar_path, 'r', encoding='utf-8') as f:
         grammar_code = f.read()
-    # Replace relative import with absolute
     grammar_code = grammar_code.replace(
         "from ..grammar.tulu_grammar import TuluGrammar",
         "from grammar.tulu_grammar import TuluGrammar"
@@ -116,7 +98,6 @@ if grammar_path.exists():
 else:
     raise ImportError(f"Could not find grammar_accuracy.py at {grammar_path}")
 
-# Load vocabulary_coverage (no relative imports, should work normally)
 vocab_path = project_root / "evaluation" / "vocabulary_coverage.py"
 if vocab_path.exists():
     spec = importlib.util.spec_from_file_location(
@@ -131,14 +112,11 @@ if vocab_path.exists():
 else:
     raise ImportError(f"Could not find vocabulary_coverage.py at {vocab_path}")
 
-# Load tokenization_efficiency (check for relative imports)
 tokenization_path = project_root / "evaluation" / "tokenization_efficiency.py"
 if tokenization_path.exists():
     with open(tokenization_path, 'r', encoding='utf-8') as f:
         tokenization_code = f.read()
-    # Check and replace any relative imports
     if "from .." in tokenization_code:
-        # Replace relative imports if any
         tokenization_code = tokenization_code.replace(
             "from ..romanization.romanization_rules import RomanizationSystem",
             "from romanization.romanization_rules import RomanizationSystem"
@@ -170,45 +148,27 @@ def evaluate_finetuned_model(
     top_p: float = 0.9,
     batch_size: int = 1,
 ) -> Dict:
-    """
-    Evaluate fine-tuned model on test set.
-    
-    Args:
-        model_path: Path to fine-tuned model
-        test_data_path: Path to test dataset
-        max_new_tokens: Maximum tokens to generate
-        temperature: Sampling temperature
-        top_p: Nucleus sampling parameter
-        batch_size: Batch size for evaluation (currently 1)
-        
-    Returns:
-        Dict with evaluation results
-    """
     if not UNSLOTH_AVAILABLE:
         raise ImportError("Unsloth is not available. Please install it first.")
-    
+
     print("=" * 70)
     print("Evaluating Fine-tuned Llama 3.2 3B")
     print("=" * 70)
-    
-    # Load test data
+
     print(f"\nLoading test data from {test_data_path}...")
     test_data = load_tulu_dataset(test_data_path)
     print(f"  Test examples: {len(test_data)}")
-    
-    # Load model
+
     print(f"\nLoading model from {model_path}...")
     if not os.path.exists(model_path):
         raise FileNotFoundError(
             f"Model not found at {model_path}. Train first using:\n"
             "  python experiments/finetuning.py"
         )
-    
+
     try:
         from unsloth import FastLanguageModel
-        # Check if it's a saved model directory or HuggingFace model name
         if os.path.isdir(model_path) and os.path.exists(os.path.join(model_path, "adapter_config.json")):
-            # Load saved fine-tuned model
             model, tokenizer = FastLanguageModel.from_pretrained(
                 model_name=model_path,
                 max_seq_length=512,
@@ -216,7 +176,6 @@ def evaluate_finetuned_model(
                 load_in_4bit=True,
             )
         else:
-            # Try loading as HuggingFace model
             model, tokenizer = FastLanguageModel.from_pretrained(
                 model_name=model_path,
                 max_seq_length=512,
@@ -229,25 +188,23 @@ def evaluate_finetuned_model(
         print(f"  ERROR loading model: {e}")
         print(f"  Make sure the model was trained and saved correctly.")
         raise
-    
-    # Initialize evaluators
+
     contamination_eval = ContaminationEvaluator()
     grammar_eval = GrammarAccuracyEvaluator()
     vocab_eval = VocabularyCoverageEvaluator()
     tokenization_eval = TokenizationEfficiencyEvaluator()
-    
-    # Generate responses
+
     print(f"\nGenerating responses for {len(test_data)} test examples...")
     generated_responses = []
     reference_responses = []
     questions = []
-    
+
     for i, example in enumerate(test_data):
         question = example["question"]
         reference = example["tulu_response"]
-        
+
         print(f"  [{i+1}/{len(test_data)}] Generating response...", end="\r")
-        
+
         try:
             response = generate_response(
                 model=model,
@@ -265,38 +222,33 @@ def evaluate_finetuned_model(
             generated_responses.append("")
             reference_responses.append(reference)
             questions.append(question)
-    
+
     print(f"\n  Generated {len(generated_responses)} responses")
-    
-    # Evaluate contamination
+
     print("\nEvaluating contamination...")
     contamination_results = contamination_eval.compute_contamination_rate(generated_responses)
     contamination_rate = contamination_results["contamination_percentage"]
     print(f"  Contamination rate: {contamination_rate:.2f}%")
     print(f"  Contaminated responses: {contamination_results['contaminated_responses']}/{contamination_results['total_responses']}")
-    
-    # Evaluate grammar
+
     print("\nEvaluating grammar accuracy...")
     grammar_results = grammar_eval.compute_grammar_accuracy(generated_responses)
     grammar_accuracy = grammar_results["grammar_accuracy_percentage"]
     print(f"  Grammar accuracy: {grammar_accuracy:.2f}%")
     print(f"  Correct responses: {grammar_results['correct_responses']}/{grammar_results['total_responses']}")
-    
-    # Evaluate vocabulary coverage
+
     print("\nEvaluating vocabulary coverage...")
     vocab_results = vocab_eval.compute_vocabulary_coverage(generated_responses)
     vocab_size = vocab_results["vocabulary_size"]
     ttr = vocab_results["type_token_ratio"]
     print(f"  Vocabulary size: {vocab_size}")
     print(f"  Type-token ratio: {ttr:.4f}")
-    
-    # Evaluate tokenization efficiency
+
     print("\nEvaluating tokenization efficiency...")
     tokenization_results = tokenization_eval.evaluate_corpus(generated_responses)
     avg_tokens_per_word = tokenization_results.get("average_tokens_per_word", 0.0)
     print(f"  Average tokens per word: {avg_tokens_per_word:.2f}")
-    
-    # Compile results
+
     results = {
         "model": "Llama-3.2-3B-Instruct (Fine-tuned)",
         "test_examples": len(test_data),
@@ -322,12 +274,11 @@ def evaluate_finetuned_model(
             for q, ref, gen in zip(questions, reference_responses, generated_responses)
         ],
     }
-    
+
     return results
 
 
 def print_results_summary(results: Dict):
-    """Print formatted results summary."""
     print("\n" + "=" * 70)
     print("EVALUATION RESULTS SUMMARY")
     print("=" * 70)
@@ -343,25 +294,22 @@ def print_results_summary(results: Dict):
 
 
 def save_results(results: Dict, output_path: str = "outputs/finetuning_evaluation_results.json"):
-    """Save evaluation results to JSON file."""
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
-    
+
     with open(output_path, 'w', encoding='utf-8') as f:
         json.dump(results, f, indent=2, ensure_ascii=False)
-    
+
     print(f"\nResults saved to: {output_path}")
 
 
 def main():
-    """Main evaluation function."""
-    # Restore original working directory at the end
     global original_cwd
-    
+
     if not UNSLOTH_AVAILABLE:
         print("ERROR: Unsloth is not available. Please install it first.")
         os.chdir(original_cwd)
         return
-    
+
     import argparse
     parser = argparse.ArgumentParser(description="Evaluate fine-tuned Llama 3.2 3B model")
     parser.add_argument(
@@ -400,9 +348,9 @@ def main():
         default=0.9,
         help="Nucleus sampling top_p"
     )
-    
+
     args = parser.parse_args()
-    
+
     try:
         results = evaluate_finetuned_model(
             model_path=args.model_path,
@@ -411,18 +359,17 @@ def main():
             temperature=args.temperature,
             top_p=args.top_p,
         )
-        
+
         print_results_summary(results)
         save_results(results, args.output)
-        
+
     except Exception as e:
         print(f"ERROR: {e}")
         import traceback
         traceback.print_exc()
         os.chdir(original_cwd)
         return 1
-    
-    # Restore original working directory
+
     os.chdir(original_cwd)
     return 0
 
@@ -431,7 +378,5 @@ if __name__ == "__main__":
     try:
         sys.exit(main())
     finally:
-        # Ensure we restore the working directory even on error
         if 'original_cwd' in globals():
             os.chdir(original_cwd)
-

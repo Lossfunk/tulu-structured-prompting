@@ -1,2 +1,0 @@
-"""Romanization system module."""
-

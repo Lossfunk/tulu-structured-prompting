@@ -150,7 +150,8 @@ If you use this code, please cite our paper:
   title={Structured Prompting for Low-Resource Language Generation: A Case Study in Tulu},
   author={Devadiga, Prathamesh},
   booktitle={Proceedings of the LoResLM Workshop at EACL 2026},
-  year={2026}
+  year={2026},
+  url={https://github.com/devadigapratham/tulu-structured-prompting}
 }
 ```
 

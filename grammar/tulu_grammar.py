@@ -1,44 +1,31 @@
-"""
-Tulu Grammar Documentation
-
-Complete Tulu grammar system including:
-- 15 high-frequency verbs with 48 distinct forms each
-- 8 grammatical cases with allomorph rules
-- Complete pronoun paradigms with formal/informal
-- Syntactic patterns (SOV, postpositions, etc.)
-"""
+# Tulu grammar: verbs, cases, pronouns, syntax
 
 from typing import Dict, List
 
 
 class TuluGrammar:
-    """Complete Tulu grammar documentation."""
-    
+    # Complete Tulu grammar documentation
+
     def __init__(self):
         self.verb_conjugation = self._load_verb_conjugation()
         self.case_marking = self._load_case_marking()
         self.pronoun_paradigms = self._load_pronoun_paradigms()
         self.syntax = self._load_syntax()
-    
+
     def _load_verb_conjugation(self) -> Dict:
-        """
-        Load verb conjugation rules for 15 high-frequency verbs.
-        
-        Each verb has 48 distinct surface forms (gender × tense × person × number × formality)
-        """
         povuni_paradigm = {
             "infinitive": "pōvuni",
             "meaning": "to go",
             "present_tense": {
-                "1sg": "pōvn",  # I go
-                "2sg_informal": "pōv",  # you go (informal)
-                "2sg_formal": "pōpri",  # you go (formal)
-                "3sg_masc": "pōvnu",  # he goes
-                "3sg_fem": "pōvl.",  # she goes
-                "3sg_neut": "pōvn",  # it goes
-                "1pl": "pōvn",  # we go
-                "2pl": "pōpri",  # you all go
-                "3pl": "pōvd."  # they go
+                "1sg": "pōvn",
+                "2sg_informal": "pōv",
+                "2sg_formal": "pōpri",
+                "3sg_masc": "pōvnu",
+                "3sg_fem": "pōvl.",
+                "3sg_neut": "pōvn",
+                "1pl": "pōvn",
+                "2pl": "pōpri",
+                "3pl": "pōvd."
             },
             "past_tense": {
                 "pattern": "Replace -v- with -y-, adjust endings",
@@ -69,8 +56,7 @@ class TuluGrammar:
                 "example": "pōyina (has gone)"
             }
         }
-        
-        # 15 verbs total - here are key ones
+
         verbs = {
             "pōvuni": povuni_paradigm,
             "mād.uni": {
@@ -93,7 +79,6 @@ class TuluGrammar:
                 "meaning": "to eat",
                 "present_tense": {"1sg": "tinn", "2sg_informal": "tin", "3sg_masc": "tinnu", "3sg_fem": "tinl."}
             },
-            # Additional verbs
             "kelvuni": {"infinitive": "kelvuni", "meaning": "to hear"},
             "paruni": {"infinitive": "paruni", "meaning": "to say"},
             "madipuni": {"infinitive": "madipuni", "meaning": "to make"},
@@ -105,7 +90,7 @@ class TuluGrammar:
             "sikkuni": {"infinitive": "sikkuni", "meaning": "to get"},
             "teruni": {"infinitive": "teruni", "meaning": "to open"}
         }
-        
+
         return {
             "verbs": verbs,
             "total_verbs": len(verbs),
@@ -116,13 +101,12 @@ class TuluGrammar:
                 "Formality distinction: 2nd person uses -ri suffix in formal register"
             ]
         }
-    
+
     def _load_case_marking(self) -> Dict:
-        """Load case marking system with 8 cases and morphophonological alternations."""
         return {
             "cases": {
                 "nominative": {
-                    "marker": "-",  # Unmarked
+                    "marker": "-",
                     "function": "Subject",
                     "examples": ["akk (sister)", "mara (tree)", "mane (house)"]
                 },
@@ -175,9 +159,8 @@ class TuluGrammar:
                 "consonant_final_stems": "Use epenthetic vowel allomorphs (-aṅ, -g, -alli, -id.d.a)"
             }
         }
-    
+
     def _load_pronoun_paradigms(self) -> Dict:
-        """Load complete pronoun paradigms with formal/informal distinctions."""
         return {
             "first_person": {
                 "sg": {"nom": "yān", "acc": "yannaṅ", "dat": "yannak", "gen": "yanda"},
@@ -199,9 +182,8 @@ class TuluGrammar:
                 "formal": "īr (you, respectful)"
             }
         }
-    
+
     def _load_syntax(self) -> Dict:
-        """Load syntactic patterns."""
         return {
             "word_order": "SOV",
             "example": "yān pustakaṅ ōdiyn (I book-ACC read) = 'I read the book'",
@@ -215,21 +197,18 @@ class TuluGrammar:
             "case_stacking": True,
             "example_case_stacking": "yān manga l.ūrud.d.a bann kūd.mbad.d.a māvanan pustakayaṅ kalpn"
         }
-    
+
     def get_all_grammar(self) -> Dict:
-        """Get complete grammar documentation."""
         return {
             "verb_conjugation": self.verb_conjugation,
             "case_marking": self.case_marking,
             "pronoun_paradigms": self.pronoun_paradigms,
             "syntax": self.syntax
         }
-    
+
     def format_for_prompt(self) -> str:
-        """Format grammar for Layer 3 of prompt (1200 tokens)."""
         parts = []
-        
-        # Verb conjugation
+
         parts.append("**Verb Conjugation Rules:**")
         parts.append("Tulu verbs conjugate for gender, tense, person, number, and formality. Key patterns:\n")
         parts.append("Present tense (using pōvuni 'to go'):")
@@ -245,8 +224,7 @@ class TuluGrammar:
         parts.append("Past tense: Replace -v- with -y-, adjust endings")
         parts.append("Future: Use -p- instead of -v-")
         parts.append("Perfect: Use -ina/-yina suffix\n")
-        
-        # Case marking
+
         parts.append("**Case Marking System:**")
         parts.append("Eight grammatical cases:")
         cases = self.case_marking["cases"]
@@ -265,8 +243,7 @@ class TuluGrammar:
         parts.append("\nAllomorph selection depends on final phoneme:")
         parts.append("- After vowels: use -ṅ, -k, -")
         parts.append("- After consonants: use -aṅ, -g, -alli\n")
-        
-        # Pronouns
+
         parts.append("**Pronoun System:**")
         parts.append("NOM ACC DAT GEN")
         parts.append("1sg yān yannaṅ yannak yanda")
@@ -276,25 +253,12 @@ class TuluGrammar:
         parts.append("3sg-fem aval. aval.ṅ aval.k aval.da")
         parts.append("1pl-incl namma nammaṅ nammak namma")
         parts.append("1pl-excl eṅga eṅgal eṅgalk eṅga\n")
-        
-        # Syntax
+
         parts.append("**Syntax:**")
         parts.append("- SOV word order: yān pustakaṅ ōdiyn (I book-ACC read) = 'I read the book'")
         parts.append("- Postpositions: mējen (table-on)")
         parts.append("- Adjective-Noun: periya mane (big house)")
         parts.append("- Genitive-Head: aval.da pustaka (her book)")
         parts.append("- Relative clauses precede head noun")
-        
+
         return "\n".join(parts)
-
-
-if __name__ == "__main__":
-    grammar = TuluGrammar()
-    print("Grammar Documentation:")
-    print(f"  Verbs: {grammar.verb_conjugation['total_verbs']}")
-    print(f"  Cases: {grammar.case_marking['total_cases']}")
-    print(f"\nSample verb (pōvuni):")
-    print(f"  Present 1sg: {grammar.verb_conjugation['verbs']['pōvuni']['present_tense']['1sg']}")
-    print(f"\nSample case (accusative):")
-    print(f"  Marker: {grammar.case_marking['cases']['accusative']['marker']}")
-

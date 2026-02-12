@@ -1,21 +1,15 @@
-"""
-Negative Constraints: 50 High-Frequency Kannada→Tulu Mappings
-
-Manages word mappings to prevent Kannada contamination in Tulu text.
-Uses exact string matching for contamination detection.
-"""
+# Negative constraints: 50 high-frequency Kannada→Tulu mappings for contamination detection
 
 from typing import List, Dict
 
 
 class NegativeConstraints:
-    """Manages 50+ high-frequency Kannada→Tulu word mappings."""
-    
+    # Manages 50+ high-frequency Kannada→Tulu word mappings
+
     def __init__(self):
         self.constraints = self._load_constraints()
-    
+
     def _load_constraints(self) -> List[Dict[str, str]]:
-        """Load 50 high-frequency Kannada→Tulu mappings."""
         mappings = [
             {"kannada_word": "naanu", "tulu_alternative": "yān", "pos": "pronoun", "category": "pronoun"},
             {"kannada_word": "nīnu", "tulu_alternative": "ī", "pos": "pronoun", "category": "pronoun"},
@@ -71,70 +65,42 @@ class NegativeConstraints:
             {"kannada_word": "yenu", "tulu_alternative": "yena", "pos": "interrogative", "category": "interrogative"},
             {"kannada_word": "yavaga", "tulu_alternative": "yetu", "pos": "temporal", "category": "temporal"},
         ]
-        
+
         if len(mappings) < 50:
             raise ValueError(f"Must have at least 50 mappings, found {len(mappings)}")
-        
+
         return mappings
-    
+
     def get_all_constraints(self) -> List[Dict[str, str]]:
-        """Get all 50+ constraint mappings."""
         return self.constraints
-    
+
     def get_kannada_words(self) -> List[str]:
-        """Get list of all prohibited Kannada words."""
         return [c["kannada_word"] for c in self.constraints]
-    
+
     def get_tulu_alternatives(self) -> Dict[str, str]:
-        """Get mapping of Kannada word → Tulu alternative."""
         return {c["kannada_word"]: c["tulu_alternative"] for c in self.constraints}
-    
+
     def format_for_prompt(self) -> str:
-        """Format constraints for prompt."""
         lines = ["Kannada → Tulu"]
         for constraint in self.constraints:
             kannada = constraint["kannada_word"]
             tulu = constraint["tulu_alternative"]
             lines.append(f"{kannada} → {tulu}")
         return "\n".join(lines)
-    
+
     def detect_contamination(self, text: str) -> Dict:
-        """
-        Detect Kannada contamination using exact string matching.
-        
-        Args:
-            text: Response text to check
-        
-        Returns:
-            Dict with contamination info
-        """
+        # Exact string matching for Kannada contamination
         text_lower = text.lower()
         kannada_words = self.get_kannada_words()
-        
+
         detected = []
         for kannada_word in kannada_words:
             if kannada_word.lower() in text_lower:
                 detected.append(kannada_word)
-        
+
         return {
             "is_contaminated": len(detected) > 0,
             "contaminated_words": detected,
             "contamination_count": len(detected),
             "contamination_rate": len(detected) / len(kannada_words) if kannada_words else 0.0
         }
-
-
-if __name__ == "__main__":
-    constraints = NegativeConstraints()
-    print(f"Total constraints: {len(constraints.get_all_constraints())}")
-    print(f"\nFirst 10 mappings:")
-    for c in constraints.get_all_constraints()[:10]:
-        print(f"  {c['kannada_word']} → {c['tulu_alternative']}")
-    
-    test_text = "yAn yenu maadodu ulle"
-    result = constraints.detect_contamination(test_text)
-    print(f"\nContamination test:")
-    print(f"  Text: {test_text}")
-    print(f"  Contaminated: {result['is_contaminated']}")
-    print(f"  Words: {result['contaminated_words']}")
-

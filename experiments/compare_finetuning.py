@@ -1,9 +1,4 @@
-"""
-Comparison script: Prompt-based vs Fine-tuned approach
-
-Compares results from prompt-based approach (Llama 3.1 70B) with
-fine-tuned approach (Llama 3.2 3B) and generates comparison table.
-"""
+# Comparison script: Prompt-based vs Fine-tuned approach
 
 import os
 import json
@@ -17,44 +12,24 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 
 def load_prompt_baseline_results(results_path: str = "outputs/paper_results.json") -> Optional[Dict]:
-    """
-    Load prompt-based baseline results.
-    
-    Args:
-        results_path: Path to baseline results JSON
-        
-    Returns:
-        Dict with baseline results or None if not found
-    """
     if not os.path.exists(results_path):
         print(f"Warning: Baseline results not found at {results_path}")
         print("  Using default values from paper")
         return None
-    
+
     with open(results_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
-    
-    # Try to extract relevant metrics
-    # Adjust based on your actual results format
+
     return data
 
 
 def load_finetuning_results(results_path: str = "outputs/finetuning_evaluation_results.json") -> Dict:
-    """
-    Load fine-tuning evaluation results.
-    
-    Args:
-        results_path: Path to fine-tuning results JSON
-        
-    Returns:
-        Dict with fine-tuning results
-    """
     if not os.path.exists(results_path):
         raise FileNotFoundError(
             f"Fine-tuning results not found at {results_path}. "
             "Run evaluation first: python experiments/evaluate_finetuned.py"
         )
-    
+
     with open(results_path, 'r', encoding='utf-8') as f:
         return json.load(f)
 
@@ -66,28 +41,12 @@ def create_comparison_table(
     baseline_contamination: float = 6.0,
     baseline_vocab_coverage: str = "~90%",
 ) -> pd.DataFrame:
-    """
-    Create comparison table between prompt-based and fine-tuned approaches.
-    
-    Args:
-        finetuning_results: Fine-tuning evaluation results
-        baseline_results: Baseline results dict (optional)
-        baseline_grammar: Baseline grammar accuracy (default from paper)
-        baseline_contamination: Baseline contamination rate (default from paper)
-        baseline_vocab_coverage: Baseline vocabulary coverage (default from paper)
-        
-    Returns:
-        DataFrame with comparison
-    """
-    # Extract fine-tuning metrics
     ft_grammar = finetuning_results.get("grammar_accuracy", 0.0)
     ft_contamination = finetuning_results.get("contamination_rate", 0.0)
     ft_vocab_size = finetuning_results.get("vocabulary_size", 0)
     ft_tokens_per_word = finetuning_results.get("average_tokens_per_word", 0.0)
-    
-    # Try to extract from baseline if available
+
     if baseline_results:
-        # Adjust based on your actual results format
         bl_grammar = baseline_results.get("grammar_accuracy", baseline_grammar)
         bl_contamination = baseline_results.get("contamination_rate", baseline_contamination)
         bl_vocab = baseline_results.get("vocabulary_coverage", baseline_vocab_coverage)
@@ -95,8 +54,7 @@ def create_comparison_table(
         bl_grammar = baseline_grammar
         bl_contamination = baseline_contamination
         bl_vocab = baseline_vocab_coverage
-    
-    # Create comparison data
+
     comparison_data = {
         "Metric": [
             "Grammar Accuracy (%)",
@@ -113,7 +71,7 @@ def create_comparison_table(
             f"{bl_grammar:.1f}",
             f"{bl_contamination:.1f}",
             bl_vocab,
-            "~1.4",  # From paper
+            "~1.4",
             "0 min (no training)",
             "0 credits",
             "API dependent",
@@ -132,13 +90,12 @@ def create_comparison_table(
             "3B parameters",
         ],
     }
-    
+
     df = pd.DataFrame(comparison_data)
     return df
 
 
 def print_comparison_table(df: pd.DataFrame):
-    """Print formatted comparison table."""
     print("\n" + "=" * 80)
     print("COMPARISON: Prompt-based vs Fine-tuned")
     print("=" * 80)
@@ -147,15 +104,12 @@ def print_comparison_table(df: pd.DataFrame):
 
 
 def save_comparison_table(df: pd.DataFrame, output_dir: str = "outputs"):
-    """Save comparison table to CSV and markdown."""
     os.makedirs(output_dir, exist_ok=True)
-    
-    # Save as CSV
+
     csv_path = os.path.join(output_dir, "finetuning_comparison.csv")
     df.to_csv(csv_path, index=False)
     print(f"\nComparison table saved to: {csv_path}")
-    
-    # Save as markdown (with fallback if tabulate is not available)
+
     md_path = os.path.join(output_dir, "finetuning_comparison.md")
     try:
         with open(md_path, 'w', encoding='utf-8') as f:
@@ -163,7 +117,6 @@ def save_comparison_table(df: pd.DataFrame, output_dir: str = "outputs"):
             f.write(df.to_markdown(index=False))
         print(f"Comparison table saved to: {md_path}")
     except ImportError:
-        # Fallback: create simple markdown table without tabulate
         with open(md_path, 'w', encoding='utf-8') as f:
             f.write("# Fine-tuning vs Prompt-based Comparison\n\n")
             f.write("| Metric | Prompt-based (Llama 3.1 70B) | Fine-tuned (Llama 3.2 3B) |\n")
@@ -171,8 +124,7 @@ def save_comparison_table(df: pd.DataFrame, output_dir: str = "outputs"):
             for _, row in df.iterrows():
                 f.write(f"| {row['Metric']} | {row['Prompt-based (Llama 3.1 70B)']} | {row['Fine-tuned (Llama 3.2 3B)']} |\n")
         print(f"Comparison table saved to: {md_path} (using fallback format)")
-    
-    # Save as LaTeX (for paper)
+
     tex_path = os.path.join(output_dir, "finetuning_comparison.tex")
     try:
         with open(tex_path, 'w', encoding='utf-8') as f:
@@ -185,7 +137,6 @@ def save_comparison_table(df: pd.DataFrame, output_dir: str = "outputs"):
         print(f"Comparison table saved to: {tex_path}")
     except Exception as e:
         print(f"Warning: Could not save LaTeX table: {e}")
-        # Fallback: create simple LaTeX table
         with open(tex_path, 'w', encoding='utf-8') as f:
             f.write("\\begin{table}[h]\n")
             f.write("\\centering\n")
@@ -207,20 +158,19 @@ def save_comparison_table(df: pd.DataFrame, output_dir: str = "outputs"):
 
 
 def generate_analysis(finetuning_results: Dict, baseline_grammar: float, baseline_contamination: float):
-    """Generate analysis text for paper."""
     ft_grammar = finetuning_results.get("grammar_accuracy", 0.0)
     ft_contamination = finetuning_results.get("contamination_rate", 0.0)
-    
+
     print("\n" + "=" * 80)
     print("ANALYSIS FOR PAPER")
     print("=" * 80)
-    
+
     print("\n\\subsection{Fine-tuning Comparison}")
     print("\nWe compared our prompt-based approach against fine-tuning Llama 3.2 3B")
     print("on our 520 training examples using Unsloth for efficient training.")
     print(f"Fine-tuning achieved {ft_grammar:.1f}\\% grammar accuracy and {ft_contamination:.1f}\\%")
     print("contamination on the same 100-example test set (Table~\\ref{tab:finetuning_comparison}).")
-    
+
     print("\n")
     if ft_grammar < baseline_grammar - 5 or ft_contamination > baseline_contamination + 5:
         print("While fine-tuning provides task-specific adaptation, our prompt-based")
@@ -238,13 +188,12 @@ def generate_analysis(finetuning_results: Dict, baseline_grammar: float, baselin
     else:
         print("Fine-tuning provides superior adaptation even with limited data, though")
         print("requires model hosting infrastructure.")
-    
+
     print("\nTraining completed in approximately 20 minutes on a single A10G GPU")
     print("using Unsloth's optimized implementation.")
 
 
 def main():
-    """Main comparison function."""
     import argparse
     parser = argparse.ArgumentParser(description="Compare fine-tuning vs prompt-based results")
     parser.add_argument(
@@ -277,16 +226,14 @@ def main():
         default="outputs",
         help="Output directory for comparison tables"
     )
-    
+
     args = parser.parse_args()
-    
+
     try:
-        # Load results
         print("Loading results...")
         finetuning_results = load_finetuning_results(args.finetuning_results)
         baseline_results = load_prompt_baseline_results(args.baseline_results)
-        
-        # Create comparison table
+
         print("Creating comparison table...")
         df = create_comparison_table(
             finetuning_results=finetuning_results,
@@ -294,27 +241,24 @@ def main():
             baseline_grammar=args.baseline_grammar,
             baseline_contamination=args.baseline_contamination,
         )
-        
-        # Print and save
+
         print_comparison_table(df)
         save_comparison_table(df, args.output_dir)
-        
-        # Generate analysis
+
         generate_analysis(
             finetuning_results,
             args.baseline_grammar,
             args.baseline_contamination,
         )
-        
+
     except Exception as e:
         print(f"ERROR: {e}")
         import traceback
         traceback.print_exc()
         return 1
-    
+
     return 0
 
 
 if __name__ == "__main__":
     sys.exit(main())
-

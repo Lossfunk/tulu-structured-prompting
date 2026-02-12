@@ -1,16 +1,5 @@
-"""
-Comprehensive Tulu Language Learning Prompts.
-
-This module contains 10 detailed teaching prompts for Tulu language learning AI systems.
-These prompts can be used individually or integrated into the TuluPromptBuilder.
-
-Each prompt includes:
-- Verified information from easytulu.com, yogish.com, and academic sources
-- Anti-contamination protocols (preventing Kannada mixing)
-- Cultural context integration
-- Practical examples and exercises
-- Quality checklists
-"""
+# 10 detailed teaching prompts for Tulu language learning.
+# Each prompt includes anti-contamination protocols, grammar, and cultural context.
 
 # Prompt 1: Comprehensive Grammar & Foundation Teaching
 PROMPT_1_GRAMMAR = """
@@ -319,21 +308,11 @@ COMPREHENSIVE_PROMPTS = {
 }
 
 
-def get_prompt(prompt_name: str) -> str:
-    """
-    Get a comprehensive Tulu learning prompt by name.
-    
-    Args:
-        prompt_name: One of: grammar, conversational, script, cultural, 
-                     children, literary, medical, phonetics, comparative, translation
-    
-    Returns:
-        The requested prompt string
-    """
+def get_prompt(prompt_name):
+    # Get a prompt by name (grammar, conversational, script, cultural, etc.)
     return COMPREHENSIVE_PROMPTS.get(prompt_name.lower(), "")
 
 
-def get_all_prompts() -> dict:
-    """Get all comprehensive prompts as a dictionary."""
+def get_all_prompts():
     return COMPREHENSIVE_PROMPTS.copy()
 
