@@ -1,6 +1,8 @@
-# Tulu LLM: Prompting Framework for Low-Resource Languages
+# Tulu LLM: Structured Prompting for Low-Resource Language Generation
 
-A comprehensive framework for teaching LLMs to generate text in Tulu, an endangered Dravidian language. This implementation uses a 5-layer prompt architecture to prevent contamination from related languages (Kannada) and ensure grammatical accuracy.
+A framework for teaching LLMs to generate text in Tulu, a low-resource Dravidian language, using a 5-layer prompt architecture. No fine-tuning required.
+
+Accepted at the **LoResLM Workshop at EACL, 2026**.
 
 ## Quick Start
 
@@ -17,161 +19,141 @@ python run_all.py
 
 ## Overview
 
-This framework implements a 5-layer prompt architecture designed to:
-- Prevent language contamination (Kannada words in Tulu output)
-- Ensure grammatical correctness
-- Support low-resource language learning for LLMs
+When asked to "respond in Tulu," LLMs default to Kannada (a related, higher-resource language). This framework uses a ~2,800-token structured prompt to prevent that contamination and produce grammatically correct Tulu output.
 
-### Key Features
+The prompt has 5 layers, applied in order:
 
-- **55+ Negative Constraints**: Kannada→Tulu word mappings to prevent contamination
-- **Complete Grammar System**: 15 verbs with full paradigms, 8 cases with allomorph rules
-- **Standardized Romanization**: Efficient tokenization (1.4 tokens/word vs 3.2 for Kannada script)
-- **Multi-Model Support**: OpenAI GPT, Google Gemini, and Llama
-- **Comprehensive Evaluation**: Contamination detection, grammar checking, vocabulary analysis
+1. **Identity** (~200 tokens): Native Tulu speaker persona with romanization rules
+2. **Negative Constraints** (~600 tokens): 50+ Kannada words to never use, each paired with the Tulu alternative
+3. **Grammar** (~1,200 tokens): Verb conjugation tables, 8 case markers, SOV word order
+4. **Few-Shot Examples** (~600 tokens): 10-15 Tulu Q&A pairs
+5. **Self-Verification** (~200 tokens): Pre-response checklist
 
 ## Repository Structure
 
 ```
 .
-├── README.md                          # This file
-├── requirements.txt                   # Dependencies
+├── run_all.py                         # Main experiment runner
 ├── config.py                          # Configuration
-├── run_all.py                         # Main orchestration script
-├── generate_results.py                # Generate graphs and tables
+├── requirements.txt                   # Dependencies
 │
 ├── prompts/
 │   ├── tulu_prompt.py                 # 5-layer prompt builder
-│   └── comprehensive_tulu_prompts.py  # Detailed teaching prompts
+│   └── comprehensive_tulu_prompts.py  # Extended prompt templates
 │
 ├── romanization/
 │   └── romanization_rules.py          # Standardized transliteration
 │
 ├── grammar/
-│   └── tulu_grammar.py                # Complete grammar documentation
+│   └── tulu_grammar.py                # Tulu grammar (15 verbs, 8 cases)
 │
 ├── constraints/
-│   └── negative_constraints.py        # 50+ Kannada→Tulu mappings
+│   └── negative_constraints.py        # 50+ Kannada→Tulu word mappings
 │
 ├── generation/
-│   └── self_play.py                   # Self-play Q/A generation
+│   └── self_play.py                   # Self-play Q&A generation with 3-judge filter
 │
 ├── evaluation/
-│   ├── contamination.py               # Contamination detection
-│   ├── grammar_accuracy.py            # Grammar checking
+│   ├── contamination.py               # Kannada contamination detection
+│   ├── grammar_accuracy.py            # Rule-based grammar checking
 │   ├── vocabulary_coverage.py         # Vocabulary analysis
 │   └── tokenization_efficiency.py     # Tokenization metrics
 │
 ├── experiments/
-│   ├── baseline.py                    # Baseline system
-│   ├── full_system.py                 # Complete 5-layer system
-│   ├── ablation.py                    # Ablation studies
-│   └── falsification.py               # Falsification experiment
+│   ├── baseline.py                    # V1 baseline ("respond in Tulu")
+│   ├── full_system.py                 # V4 full 5-layer system
+│   ├── ablation.py                    # Ablation studies (V1-V4 + component removal)
+│   ├── falsification.py               # Falsification with incorrect grammar
+│   ├── finetuning.py                  # Fine-tuning comparison (Llama 3.2 3B)
+│   ├── evaluate_finetuned.py          # Evaluation for fine-tuned model
+│   ├── compare_finetuning.py          # Prompt vs fine-tuning comparison
+│   └── prepare_training_data.py       # Training data preparation
 │
 ├── models/
 │   ├── base_model.py                  # Abstract base class
-│   ├── openai_model.py                # GPT-3.5/4 wrapper
+│   ├── openai_model.py                # GPT wrapper
 │   ├── gemini_model.py                # Gemini wrapper
 │   └── llama_model.py                 # Llama wrapper
 │
-├── results/
-│   ├── visualize_results.py           # Visualization module
-│   └── README.md                      # Results documentation
+├── utils/
+│   ├── logging_utils.py               # Experiment logging
+│   └── tokenization.py                # Tokenization utilities
 │
-└── utils/
-    ├── logging_utils.py               # Experiment logging
-    └── tokenization.py                # Tokenization utilities
-```
-
-## Architecture Overview
-
-| Component | Module | Description |
-|-----------|--------|-------------|
-| Romanization | `romanization/romanization_rules.py` | Standardized transliteration system |
-| Grammar | `grammar/tulu_grammar.py` | Complete grammar (15 verbs, 8 cases) |
-| Constraints | `constraints/negative_constraints.py` | 50+ Kannada→Tulu mappings |
-| Prompts | `prompts/tulu_prompt.py` | 5-layer prompt builder (~2,800 tokens) |
-| Generation | `generation/self_play.py` | Self-play Q/A generation with quality control |
-| Evaluation | `evaluation/*.py` | 4 evaluation metrics |
-| Experiments | `experiments/*.py` | Baseline, full system, ablation, falsification |
-
-## Setup
-
-### Prerequisites
-
-- Python 3.9+
-- API key for at least one LLM:
-  - OpenAI API key (for GPT-3.5/4)
-  - Google Gemini API key (for Gemini 2.0 Flash)
-
-### Installation
-
-```bash
-pip install -r requirements.txt
-export OPENAI_API_KEY="your-key-here"
+└── data/
+    ├── tulu_train.json                # Training set
+    ├── tulu_dev.json                  # Dev set
+    ├── tulu_test.json                 # Test set (100 sentences)
+    ├── seed_examples.json             # Few-shot seed examples
+    └── tulu_grammar_rules.json        # Grammar rules (JSON)
 ```
 
 ## Running Experiments
 
-### All Experiments
+### Full pipeline
 
 ```bash
 python run_all.py
 ```
 
-### Individual Experiments
+This runs: baseline (V1), full system (V4), ablation (V1-V4 + component removal), paper versions, and falsification.
+
+### Individual experiments
 
 ```python
 from models.openai_model import OpenAIModel
 from experiments.full_system import FullSystemExperiment
 import json
 
-# Initialize model
 model = OpenAIModel(model_name="gpt-4o")
 
-# Load test set
 with open("data/tulu_test.json") as f:
-    test_set = json.load(f)
+    test_data = json.load(f)
+    test_set = test_data["sentences"] if "sentences" in test_data else test_data
 
-# Run experiment
 experiment = FullSystemExperiment(model)
 results = experiment.run(test_set[:10])
 
 print(f"Contamination: {results['contamination_rate']:.1%}")
-print(f"Grammar Accuracy: {results['grammar_accuracy']:.1%}")
+print(f"Grammar accuracy: {results['grammar_accuracy']:.1%}")
 ```
 
-## Generating Results Visualizations
+## Key Results
 
-After running experiments, generate publication-ready graphs and tables:
+| Version | Contamination | Grammar Accuracy |
+|---------|--------------|-----------------|
+| V1 (baseline) | ~72% | ~35% |
+| V2 (+ grammar) | ~58% | ~48% |
+| V3 (+ constraints) | ~22% | ~62% |
+| V4 (full system) | ~14% | ~74% |
+
+Negative constraints are the single most impactful layer. Removing them from the full system increases contamination by ~38 percentage points.
+
+## Setup
+
+**Prerequisites:**
+- Python 3.9+
+- API key for at least one of: OpenAI (GPT-4o), Google Gemini, or a local Llama setup
 
 ```bash
-python generate_results.py
+pip install -r requirements.txt
+export OPENAI_API_KEY="your-key-here"
+# or
+export GEMINI_API_KEY="your-key-here"
 ```
 
-This creates:
-- Graphs: Contamination comparison, grammar accuracy, ablation study, model comparison
-- Tables: All results in LaTeX and CSV formats
+## Citation
 
-See `results/README.md` for details.
+If you use this code, please cite our paper:
 
-## Implementation Details
+```bibtex
+@inproceedings{devadiga2026tulu,
+  title={Structured Prompting for Low-Resource Language Generation: A Case Study in Tulu},
+  author={Devadiga, Prathamesh},
+  booktitle={Proceedings of the LoResLM Workshop at EACL 2026},
+  year={2026}
+}
+```
 
-### 5-Layer Prompt Architecture
+## License
 
-1. **Identity Establishment** (200 tokens): Native Tulu speaker persona
-2. **Negative Constraints** (600 tokens): 50+ Kannada→Tulu mappings **MUST come before grammar**
-3. **Grammar Rules** (1200 tokens): 15 verbs, 8 cases, pronouns, syntax
-4. **Few-Shot Examples** (600 tokens): 10-15 Q&A pairs
-5. **Self-Verification** (200 tokens): Pre-generation checklist
-
-**Total: ~2,800 tokens**
-
-### Key Components
-
-- **55 Negative Constraints**: Kannada→Tulu word mappings
-- **15 Verbs**: Complete conjugation paradigms (48 forms each)
-- **8 Cases**: With morphophonological allomorph rules
-- **3-Judge Quality Control**: 1-5 Likert scale, 64% retention
-- **4 Evaluation Metrics**: Contamination, grammar, vocabulary, tokenization
-
+See [LICENSE](LICENSE).

@@ -47,6 +47,12 @@ data/*.json.bak
 data/synthetic_data.json
 # Note: Actual data files (tulu_test.json, seed_examples.json, etc.) should be committed
 
+# Blog (not part of the paper repo)
+blog/
+
+# Audit reports
+PAPER_SPEC_AUDIT_REPORT.md
+
 # OS
 .DS_Store
 Thumbs.db

@@ -250,4 +250,3 @@ class AblationExperiment:
             "versions": results,
             "note": "V1 = baseline (run via BaselineExperiment); V2–V4 run here."
         }
-
