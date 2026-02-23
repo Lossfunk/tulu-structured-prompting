@@ -1,3 +1,8 @@
+<p align="center">
+  <img src="lossfunk-logo.jpg" alt="Lossfunk Logo" width="200"/>
+</p>
+
+
 # Tulu LLM: Structured Prompting for Low-Resource Language Generation
 
 A framework for teaching LLMs to generate text in Tulu, a low-resource Dravidian language, using a 5-layer prompt architecture. No fine-tuning required.
