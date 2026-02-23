@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="lossfunk-logo.jpg" alt="Lossfunk Logo" width="200"/>
+  <img src="lossfunk-logo.jpg" alt="Lossfunk Logo" width="350"/>
 </p>
 
 
