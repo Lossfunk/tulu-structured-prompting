@@ -3,11 +3,11 @@
 </p>
 
 
-# Tulu LLM: Structured Prompting for Low-Resource Language Generation
+# Making Large Language Models Speak Tulu: Structured Prompting for an Extremely Low-Resource Language
 
 A framework for teaching LLMs to generate text in Tulu, a low-resource Dravidian language, using a 5-layer prompt architecture. No fine-tuning required.
 
-Accepted at the **LoResLM Workshop at EACL, 2026**.
+Accepted at the **LoResLM Workshop at EACL, 2026**. [[arXiv]](https://arxiv.org/abs/2602.15378)
 
 ## Quick Start
 
@@ -150,13 +150,15 @@ export GEMINI_API_KEY="your-key-here"
 
 If you use this code, please cite our paper:
 
+**Preprint:** [arxiv.org/abs/2602.15378](https://arxiv.org/abs/2602.15378)
+
 ```bibtex
 @inproceedings{devadiga2026tulu,
-  title={Structured Prompting for Low-Resource Language Generation: A Case Study in Tulu},
+  title={Making Large Language Models Speak Tulu: Structured Prompting for an Extremely Low-Resource Language},
   author={Devadiga, Prathamesh and Chopra, Paras},
   booktitle={Proceedings of the LoResLM Workshop at EACL 2026},
   year={2026},
-  url={https://github.com/devadigapratham/tulu-structured-prompting}
+  url={https://arxiv.org/abs/2602.15378}
 }
 ```
 
